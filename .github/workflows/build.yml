@@ -46,14 +46,16 @@ jobs:
           OUT="_site"
           rm -rf "${OUT:?}"
           mkdir -p "$OUT"
+          # The overlay (src/) may add paths but never overwrite a spec path,
+          # except index.html (the spec front page moves to /spec/).
+          python3 tools/compare-urls.py --check-overlay spec-site src
           cp -R spec-site/. "$OUT"/
           mkdir -p "$OUT/spec"
           mv "$OUT/index.html" "$OUT/spec/index.html"
-          cp src/index.html "$OUT/index.html"
-          cp src/robots.txt "$OUT/robots.txt"
+          cp -R src/. "$OUT"/
 
       - name: Prove the new build serves every spec URL the old build does
-        run: python3 tools/compare-urls.py spec-site _site
+        run: python3 tools/compare-urls.py spec-site _site src
 
       - name: Upload assembled site as a workflow artifact
         uses: actions/upload-artifact@v4

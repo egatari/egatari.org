@@ -1,14 +1,176 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
 <head>
-<meta charset="UTF-8">
+<meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>Egatari</title>
+<title>Egatari：絵が語り、人へ伝える。</title>
+<meta name="description" content="スライド・台本・音声・本を、1 つの HTML ファイルにまとめる教材の形式 Egatari。">
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/assets/logo/egatari-light.svg" type="image/svg+xml">
+<link rel="preload" href="/assets/fonts/shippori-mincho-b1-800.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="/assets/site.css">
 </head>
 <body>
-<h1>Egatari — site under construction</h1>
-<p><a href="/spec/">Read the specification</a></p>
-<p><a href="https://github.com/egatari">github.com/egatari</a></p>
+<a class="skip" href="#main">本文へ</a>
+
+<p class="notice">Egatari 1.0 の仕様は作業中の草案です。<a href="/spec/">仕様を読む</a></p>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="site-head">
+      <a class="brand" href="/"><img src="/assets/logo/egatari-dark.svg" alt="" width="48" height="48">Egatari</a>
+      <nav class="site-nav" aria-label="サイト">
+        <a href="/gallery/">見本</a>
+        <a href="/spec/">仕様</a>
+        <a href="https://github.com/egatari">GitHub</a>
+      </nav>
+    </div>
+    <div class="hero-grid">
+      <div>
+        <h1 class="headline"><span>絵が語り、</span><span class="accent">人へ伝える。</span></h1>
+        <p class="lead">伝える人すべてのための、1 つのファイル。</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="https://studio.egatari.org/">編集アプリを開く</a>
+          <a class="btn btn-secondary" href="/gallery/">見本を見る</a>
+        </div>
+      </div>
+      <!-- HERO SLOT: for now a still of a real lesson (egatari-intro, first slide,
+           from samples-v0.6.9). Later this becomes a lesson that plays with its
+           script, served from viewer.egatari.org (spec §10.1 needs a sandboxing
+           CSP header that this host cannot send), so do not embed .ega.html here. -->
+      <figure class="hero-visual">
+        <img src="/assets/hero-egatari-intro.webp" width="1280" height="720"
+             alt="見本「Egatari の紹介」の表紙。見出しは「絵が語り、人へ伝える」。">
+      </figure>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="sec" aria-labelledby="s01">
+    <div class="wrap sec-grid">
+      <p class="num" aria-hidden="true">01</p>
+      <div class="sec-body">
+        <h2 id="s01">1 つのファイルに、全部入る</h2>
+        <p>スライド・台本・音声・本を、1 つの HTML ファイル（.ega.html）にまとめます。ブラウザで開けばそのまま再生でき、編集アプリで開けば直せます。メールで送る、校内のサーバーに置く、LMS に載せる（SCORM）。どれも、そのファイル 1 つです。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="s02">
+    <div class="wrap sec-grid">
+      <p class="num" aria-hidden="true">02</p>
+      <div class="sec-body">
+        <h2 id="s02">話す順に、見せる</h2>
+        <p>説明する順に、図や式を 1 つずつ出します（ステップ）。台本を付ければ、読み上げの音声と字幕が付き、動画にも書き出せます。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="s03">
+    <div class="wrap sec-grid">
+      <p class="num" aria-hidden="true">03</p>
+      <div class="sec-body">
+        <h2 id="s03">AI が書き、品質チェックが直す</h2>
+        <p>チャットの AI に題材を伝えると、教材の原稿ができます。品質チェックが、文字のはみ出し・小さすぎる字・色のコントラスト・画像の代替テキストを調べ、直す依頼の文まで作ります。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="s04">
+    <div class="wrap sec-grid">
+      <p class="num" aria-hidden="true">04</p>
+      <div class="sec-body">
+        <h2 id="s04">学習者の手元で、読み返す</h2>
+        <p>学習者はスマートフォンやタブレットで、自分のペースで読み返せます。本の形で読む、ハイライトを引く、暗記のために隠す。引いたハイライトはその端末の中だけに残り、ファイルにも、どこにも送られません。</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="s05">
+    <div class="wrap sec-grid">
+      <p class="num" aria-hidden="true">05</p>
+      <div class="sec-body">
+        <h2 id="s05">教育・ビジネス・生活</h2>
+        <ul class="areas">
+          <li class="area"><a href="/gallery/#teaching">
+            <img src="/gallery/covers/moon-phases.webp" width="640" height="360" alt="見本「月の満ち欠け」の表紙" loading="lazy">
+            <span class="area-name">教育</span>
+            <span class="area-desc">授業・講義・校内研修</span>
+          </a></li>
+          <li class="area"><a href="/gallery/#business">
+            <img src="/gallery/covers/quarterly-report.webp" width="640" height="360" alt="見本「第 3 四半期 業績報告」の表紙" loading="lazy">
+            <span class="area-name">ビジネス</span>
+            <span class="area-desc">報告・提案・社内研修</span>
+          </a></li>
+          <li class="area"><a href="/gallery/#life">
+            <img src="/gallery/covers/hazard-map.webp" width="640" height="360" alt="見本「大雨のとき、どこへ逃げる？」の表紙" loading="lazy">
+            <span class="area-name">生活</span>
+            <span class="area-desc">自治体・医療・防災の案内</span>
+          </a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="s06">
+    <div class="wrap sec-grid">
+      <p class="num" aria-hidden="true">06</p>
+      <div class="sec-body">
+        <h2 id="s06">開かれた形式</h2>
+        <p>Egatari は、特定のアプリに縛られないファイル形式です。仕様は誰でも読めて（CC BY 4.0）、どの道具からでも作れます。</p>
+        <ul class="links">
+          <li><a href="/spec/">仕様（Egatari 1.0）</a></li>
+          <li><a href="https://github.com/egatari">GitHub</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section class="sec" aria-labelledby="s07">
+    <div class="wrap sec-grid">
+      <p class="num" aria-hidden="true">07</p>
+      <div class="sec-body">
+        <h2 id="s07">始め方</h2>
+        <ol class="routes">
+          <li>
+            <h3>編集アプリ（インストール不要）</h3>
+            <p>Chrome か Edge で <a href="https://studio.egatari.org/">studio.egatari.org</a> を開き、その場で作ります。</p>
+          </li>
+          <li>
+            <h3>チャットの AI と</h3>
+            <p><a href="https://github.com/egatari/egatari-studio#get-started">Claude・Codex 用のスキル</a>を入れ、教材づくりを頼みます。</p>
+          </li>
+          <li>
+            <h3>コマンドライン</h3>
+            <pre class="code" tabindex="0" aria-label="コマンドの例"><code>npx egatari new mytalk --lang ja
+npx egatari dev mytalk/deck.html</code></pre>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+</main>
+
+<div class="closing">
+  <div class="wrap">
+    <div class="actions">
+      <a class="btn btn-primary" href="https://studio.egatari.org/">編集アプリを開く</a>
+      <a class="btn btn-secondary" href="/gallery/">見本を見る</a>
+    </div>
+  </div>
+</div>
+
+<footer class="site-foot">
+  <div class="wrap">
+    <p>© 2026 雲居玄道 ・ サイトの文と画像は CC BY 4.0</p>
+    <ul>
+      <li><a href="/spec/">仕様</a></li>
+      <li><a href="https://github.com/egatari">GitHub</a></li>
+      <li><a href="/gallery/">見本</a></li>
+    </ul>
+  </div>
+</footer>
 </body>
 </html>

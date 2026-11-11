@@ -1,0 +1,209 @@
+{
+  "release": "samples-v0.6.9",
+  "download_base": "https://github.com/egatari/examples/releases/download/samples-v0.6.9/",
+  "sections": [
+    {
+      "id": "intro",
+      "title": "まず見る",
+      "subtitle": ""
+    },
+    {
+      "id": "teaching",
+      "title": "教育",
+      "subtitle": "授業・講義・校内研修"
+    },
+    {
+      "id": "business",
+      "title": "ビジネス",
+      "subtitle": "報告・提案・社内研修"
+    },
+    {
+      "id": "life",
+      "title": "生活",
+      "subtitle": "自治体・医療・防災の案内"
+    }
+  ],
+  "lessons": [
+    {
+      "id": "egatari-intro",
+      "title": "Egatari の紹介",
+      "section": "intro",
+      "lang": "ja",
+      "portable": "egatari-intro.ega.html",
+      "play": "egatari-intro.play.ega.html",
+      "cover": "covers/egatari-intro.webp",
+      "playUrl": "https://viewer.egatari.org/g/egatari-intro"
+    },
+    {
+      "id": "egatari-intro-en",
+      "title": "Introducing Egatari",
+      "section": "intro",
+      "lang": "en",
+      "portable": "egatari-intro-en.ega.html",
+      "play": "egatari-intro-en.play.ega.html",
+      "cover": "covers/egatari-intro-en.webp",
+      "playUrl": "https://viewer.egatari.org/g/egatari-intro-en"
+    },
+    {
+      "id": "egatari-cm",
+      "title": "Egatari 15 秒",
+      "section": "intro",
+      "lang": "ja",
+      "portable": "egatari-cm.ega.html",
+      "play": "egatari-cm.play.ega.html",
+      "cover": "covers/egatari-cm.webp",
+      "playUrl": "https://viewer.egatari.org/g/egatari-cm"
+    },
+    {
+      "id": "parts-showcase",
+      "title": "パーツ図鑑",
+      "section": "intro",
+      "lang": "ja",
+      "portable": "parts-showcase.ega.html",
+      "play": "parts-showcase.play.ega.html",
+      "cover": "covers/parts-showcase.webp",
+      "playUrl": "https://viewer.egatari.org/g/parts-showcase"
+    },
+    {
+      "id": "moon-phases",
+      "title": "月の満ち欠け",
+      "section": "teaching",
+      "lang": "ja",
+      "portable": "moon-phases.ega.html",
+      "play": "moon-phases.play.ega.html",
+      "cover": "covers/moon-phases.webp",
+      "playUrl": "https://viewer.egatari.org/g/moon-phases"
+    },
+    {
+      "id": "chords",
+      "title": "和音のしくみ",
+      "section": "teaching",
+      "lang": "ja",
+      "portable": "chords.ega.html",
+      "play": "chords.play.ega.html",
+      "cover": "covers/chords.webp",
+      "playUrl": "https://viewer.egatari.org/g/chords"
+    },
+    {
+      "id": "sentence-structure",
+      "title": "英文の構造",
+      "section": "teaching",
+      "lang": "ja",
+      "portable": "sentence-structure.ega.html",
+      "play": "sentence-structure.play.ega.html",
+      "cover": "covers/sentence-structure.webp",
+      "playUrl": "https://viewer.egatari.org/g/sentence-structure"
+    },
+    {
+      "id": "huffman",
+      "title": "ハフマン符号",
+      "section": "teaching",
+      "lang": "ja",
+      "portable": "huffman.ega.html",
+      "play": "huffman.play.ega.html",
+      "cover": "covers/huffman.webp",
+      "playUrl": "https://viewer.egatari.org/g/huffman"
+    },
+    {
+      "id": "bayes",
+      "title": "Bayes' theorem",
+      "section": "teaching",
+      "lang": "en",
+      "portable": "bayes.ega.html",
+      "play": "bayes.play.ega.html",
+      "cover": "covers/bayes.webp",
+      "playUrl": "https://viewer.egatari.org/g/bayes"
+    },
+    {
+      "id": "population",
+      "title": "日本の人口の移り変わり",
+      "section": "teaching",
+      "lang": "ja",
+      "portable": "population.ega.html",
+      "play": "population.play.ega.html",
+      "cover": "covers/population.webp",
+      "playUrl": "https://viewer.egatari.org/g/population"
+    },
+    {
+      "id": "live-birthday",
+      "title": "40 人のクラスに、同じ誕生日の 2 人はいる？",
+      "section": "teaching",
+      "lang": "ja",
+      "portable": "live-birthday.ega.html",
+      "play": "live-birthday.play.ega.html",
+      "cover": "covers/live-birthday.webp",
+      "playUrl": "https://viewer.egatari.org/g/live-birthday"
+    },
+    {
+      "id": "genai-guideline",
+      "title": "生成AIの利活用ガイドラインを読む",
+      "section": "teaching",
+      "lang": "ja",
+      "portable": "genai-guideline.ega.html",
+      "play": "genai-guideline.play.ega.html",
+      "cover": "covers/genai-guideline.webp",
+      "playUrl": "https://viewer.egatari.org/g/genai-guideline"
+    },
+    {
+      "id": "quarterly-report",
+      "title": "第 3 四半期 業績報告",
+      "section": "business",
+      "lang": "ja",
+      "portable": "quarterly-report.ega.html",
+      "play": "quarterly-report.play.ega.html",
+      "cover": "covers/quarterly-report.webp",
+      "playUrl": "https://viewer.egatari.org/g/quarterly-report"
+    },
+    {
+      "id": "security-training",
+      "title": "情報セキュリティ研修",
+      "section": "business",
+      "lang": "ja",
+      "portable": "security-training.ega.html",
+      "play": "security-training.play.ega.html",
+      "cover": "covers/security-training.webp",
+      "playUrl": "https://viewer.egatari.org/g/security-training"
+    },
+    {
+      "id": "city-budget-ja",
+      "title": "A 市の予算 2027 年度",
+      "section": "life",
+      "lang": "ja",
+      "portable": "city-budget-ja.ega.html",
+      "play": "city-budget-ja.play.ega.html",
+      "cover": "covers/city-budget-ja.webp",
+      "playUrl": "https://viewer.egatari.org/g/city-budget-ja"
+    },
+    {
+      "id": "city-budget-en",
+      "title": "City A budget 2027",
+      "section": "life",
+      "lang": "en",
+      "portable": "city-budget-en.ega.html",
+      "play": "city-budget-en.play.ega.html",
+      "cover": "covers/city-budget-en.webp",
+      "playUrl": "https://viewer.egatari.org/g/city-budget-en"
+    },
+    {
+      "id": "hand-hygiene",
+      "title": "手指衛生の 5 つのタイミング",
+      "section": "life",
+      "lang": "ja",
+      "portable": "hand-hygiene.ega.html",
+      "play": "hand-hygiene.play.ega.html",
+      "cover": "covers/hand-hygiene.webp",
+      "playUrl": "https://viewer.egatari.org/g/hand-hygiene"
+    },
+    {
+      "id": "hazard-map",
+      "title": "大雨のとき、どこへ逃げる？",
+      "section": "life",
+      "lang": "ja",
+      "portable": "hazard-map.ega.html",
+      "play": "hazard-map.play.ega.html",
+      "cover": "covers/hazard-map.webp",
+      "playUrl": "https://viewer.egatari.org/g/hazard-map"
+    }
+  ],
+  "play_live": false
+}
