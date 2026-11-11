@@ -32,7 +32,7 @@
       "portable": "egatari-intro.ega.html",
       "play": "egatari-intro.play.ega.html",
       "cover": "covers/egatari-intro.webp",
-      "playUrl": "https://viewer.egatari.org/g/egatari-intro"
+      "playUrl": "/gallery/play/?id=egatari-intro"
     },
     {
       "id": "egatari-intro-en",
@@ -42,7 +42,7 @@
       "portable": "egatari-intro-en.ega.html",
       "play": "egatari-intro-en.play.ega.html",
       "cover": "covers/egatari-intro-en.webp",
-      "playUrl": "https://viewer.egatari.org/g/egatari-intro-en"
+      "playUrl": "/gallery/play/?id=egatari-intro-en"
     },
     {
       "id": "egatari-cm",
@@ -52,7 +52,7 @@
       "portable": "egatari-cm.ega.html",
       "play": "egatari-cm.play.ega.html",
       "cover": "covers/egatari-cm.webp",
-      "playUrl": "https://viewer.egatari.org/g/egatari-cm"
+      "playUrl": "/gallery/play/?id=egatari-cm"
     },
     {
       "id": "parts-showcase",
@@ -62,7 +62,7 @@
       "portable": "parts-showcase.ega.html",
       "play": "parts-showcase.play.ega.html",
       "cover": "covers/parts-showcase.webp",
-      "playUrl": "https://viewer.egatari.org/g/parts-showcase"
+      "playUrl": "/gallery/play/?id=parts-showcase"
     },
     {
       "id": "moon-phases",
@@ -72,7 +72,7 @@
       "portable": "moon-phases.ega.html",
       "play": "moon-phases.play.ega.html",
       "cover": "covers/moon-phases.webp",
-      "playUrl": "https://viewer.egatari.org/g/moon-phases"
+      "playUrl": "/gallery/play/?id=moon-phases"
     },
     {
       "id": "chords",
@@ -82,7 +82,7 @@
       "portable": "chords.ega.html",
       "play": "chords.play.ega.html",
       "cover": "covers/chords.webp",
-      "playUrl": "https://viewer.egatari.org/g/chords"
+      "playUrl": "/gallery/play/?id=chords"
     },
     {
       "id": "sentence-structure",
@@ -92,7 +92,7 @@
       "portable": "sentence-structure.ega.html",
       "play": "sentence-structure.play.ega.html",
       "cover": "covers/sentence-structure.webp",
-      "playUrl": "https://viewer.egatari.org/g/sentence-structure"
+      "playUrl": "/gallery/play/?id=sentence-structure"
     },
     {
       "id": "huffman",
@@ -102,7 +102,7 @@
       "portable": "huffman.ega.html",
       "play": "huffman.play.ega.html",
       "cover": "covers/huffman.webp",
-      "playUrl": "https://viewer.egatari.org/g/huffman"
+      "playUrl": "/gallery/play/?id=huffman"
     },
     {
       "id": "bayes",
@@ -112,7 +112,7 @@
       "portable": "bayes.ega.html",
       "play": "bayes.play.ega.html",
       "cover": "covers/bayes.webp",
-      "playUrl": "https://viewer.egatari.org/g/bayes"
+      "playUrl": "/gallery/play/?id=bayes"
     },
     {
       "id": "population",
@@ -122,7 +122,7 @@
       "portable": "population.ega.html",
       "play": "population.play.ega.html",
       "cover": "covers/population.webp",
-      "playUrl": "https://viewer.egatari.org/g/population"
+      "playUrl": "/gallery/play/?id=population"
     },
     {
       "id": "live-birthday",
@@ -132,7 +132,7 @@
       "portable": "live-birthday.ega.html",
       "play": "live-birthday.play.ega.html",
       "cover": "covers/live-birthday.webp",
-      "playUrl": "https://viewer.egatari.org/g/live-birthday"
+      "playUrl": "/gallery/play/?id=live-birthday"
     },
     {
       "id": "genai-guideline",
@@ -142,7 +142,7 @@
       "portable": "genai-guideline.ega.html",
       "play": "genai-guideline.play.ega.html",
       "cover": "covers/genai-guideline.webp",
-      "playUrl": "https://viewer.egatari.org/g/genai-guideline"
+      "playUrl": "/gallery/play/?id=genai-guideline"
     },
     {
       "id": "quarterly-report",
@@ -152,7 +152,7 @@
       "portable": "quarterly-report.ega.html",
       "play": "quarterly-report.play.ega.html",
       "cover": "covers/quarterly-report.webp",
-      "playUrl": "https://viewer.egatari.org/g/quarterly-report"
+      "playUrl": "/gallery/play/?id=quarterly-report"
     },
     {
       "id": "security-training",
@@ -162,7 +162,7 @@
       "portable": "security-training.ega.html",
       "play": "security-training.play.ega.html",
       "cover": "covers/security-training.webp",
-      "playUrl": "https://viewer.egatari.org/g/security-training"
+      "playUrl": "/gallery/play/?id=security-training"
     },
     {
       "id": "city-budget-ja",
@@ -172,7 +172,7 @@
       "portable": "city-budget-ja.ega.html",
       "play": "city-budget-ja.play.ega.html",
       "cover": "covers/city-budget-ja.webp",
-      "playUrl": "https://viewer.egatari.org/g/city-budget-ja"
+      "playUrl": "/gallery/play/?id=city-budget-ja"
     },
     {
       "id": "city-budget-en",
@@ -182,7 +182,7 @@
       "portable": "city-budget-en.ega.html",
       "play": "city-budget-en.play.ega.html",
       "cover": "covers/city-budget-en.webp",
-      "playUrl": "https://viewer.egatari.org/g/city-budget-en"
+      "playUrl": "/gallery/play/?id=city-budget-en"
     },
     {
       "id": "hand-hygiene",
@@ -192,7 +192,7 @@
       "portable": "hand-hygiene.ega.html",
       "play": "hand-hygiene.play.ega.html",
       "cover": "covers/hand-hygiene.webp",
-      "playUrl": "https://viewer.egatari.org/g/hand-hygiene"
+      "playUrl": "/gallery/play/?id=hand-hygiene"
     },
     {
       "id": "hazard-map",
@@ -202,8 +202,8 @@
       "portable": "hazard-map.ega.html",
       "play": "hazard-map.play.ega.html",
       "cover": "covers/hazard-map.webp",
-      "playUrl": "https://viewer.egatari.org/g/hazard-map"
+      "playUrl": "/gallery/play/?id=hazard-map"
     }
   ],
-  "play_live": false
+  "play_live": true
 }

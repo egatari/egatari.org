@@ -1,0 +1,151 @@
+{
+  "repo": "egatari/examples",
+  "tag": "samples-v0.6.9",
+  "sums": "f3407e5c7f3cc29d3d7e00e964bec9851b76c27a5e8aa1d2b833a7059e7e95a8",
+  "lessons": [
+    {
+      "id": "egatari-intro",
+      "file": "egatari-intro.play.ega.html",
+      "sha256": "daec5ae9d6e6805fdd4009aca4d69358b675c50c988bf8999b6c302ccb7fa137",
+      "size": 1254390,
+      "title": "Egatari の紹介",
+      "lang": "ja"
+    },
+    {
+      "id": "egatari-intro-en",
+      "file": "egatari-intro-en.play.ega.html",
+      "sha256": "b729905c26d0a9f06feb44f6ffe79eaf5cc7c7238e9dcb3094941a4c598e85a3",
+      "size": 1108733,
+      "title": "Introducing Egatari",
+      "lang": "en"
+    },
+    {
+      "id": "egatari-cm",
+      "file": "egatari-cm.play.ega.html",
+      "sha256": "dcdef728d5ded30393f4992c318341c4e90c40a8d362cd08d60c48e9b2b77f32",
+      "size": 1224029,
+      "title": "Egatari 15 秒",
+      "lang": "ja"
+    },
+    {
+      "id": "parts-showcase",
+      "file": "parts-showcase.play.ega.html",
+      "sha256": "fb58c079fcbe2a44d18403c324c4a551d8e6cd4dfd2ffd2e6450938d707472c8",
+      "size": 3877539,
+      "title": "パーツ図鑑",
+      "lang": "ja"
+    },
+    {
+      "id": "moon-phases",
+      "file": "moon-phases.play.ega.html",
+      "sha256": "e5c24c06e2260d46d2568c676c1f06afcd2534f9204db0a0fa8f393a8314eafb",
+      "size": 1259947,
+      "title": "月の満ち欠け",
+      "lang": "ja"
+    },
+    {
+      "id": "chords",
+      "file": "chords.play.ega.html",
+      "sha256": "69a05e1b689dec9bba1ee11324504076439a95aafdd86e43af734541f43f7678",
+      "size": 1241241,
+      "title": "和音のしくみ",
+      "lang": "ja"
+    },
+    {
+      "id": "sentence-structure",
+      "file": "sentence-structure.play.ega.html",
+      "sha256": "e2e14aeb5f8dd0b83c3f183667d4d4c71b9a2492d2e9bda3a32feefd951e1663",
+      "size": 1268897,
+      "title": "英文の構造",
+      "lang": "ja"
+    },
+    {
+      "id": "huffman",
+      "file": "huffman.play.ega.html",
+      "sha256": "0ac4ea0005882525688190d2c273a7f296f0e7b2465250dc4e53fd381f4a64be",
+      "size": 1764450,
+      "title": "ハフマン符号",
+      "lang": "ja"
+    },
+    {
+      "id": "bayes",
+      "file": "bayes.play.ega.html",
+      "sha256": "c4e2e65cada7f687bf59b7883fbded4c829bec7ed2ec66db06918ad1176ad7e1",
+      "size": 1123663,
+      "title": "Bayes' theorem",
+      "lang": "en"
+    },
+    {
+      "id": "population",
+      "file": "population.play.ega.html",
+      "sha256": "fa2ff9dc088dd70dfcdcee141cd68df3cbfe8d125c2a98e39e65e8e6eca7d715",
+      "size": 1936896,
+      "title": "日本の人口の移り変わり",
+      "lang": "ja"
+    },
+    {
+      "id": "live-birthday",
+      "file": "live-birthday.play.ega.html",
+      "sha256": "da25eb3711ec9c23fc4b8d0fe8dc0266fba31ccde6000dfcedda767c598d939d",
+      "size": 1276401,
+      "title": "40 人のクラスに、同じ誕生日の 2 人はいる？",
+      "lang": "ja"
+    },
+    {
+      "id": "genai-guideline",
+      "file": "genai-guideline.play.ega.html",
+      "sha256": "397a83231c519c350f29012a56e46a655a9c34147153fee163a0ef7c98130bf1",
+      "size": 1688823,
+      "title": "生成AIの利活用ガイドラインを読む",
+      "lang": "ja"
+    },
+    {
+      "id": "quarterly-report",
+      "file": "quarterly-report.play.ega.html",
+      "sha256": "ffa3b6ed334cea62e0ecf2344872433c86ccc446f3552b5a1d8bacf8395d01b2",
+      "size": 1366636,
+      "title": "第 3 四半期 業績報告",
+      "lang": "ja"
+    },
+    {
+      "id": "security-training",
+      "file": "security-training.play.ega.html",
+      "sha256": "4c052e2aca4709902a2277d0214154dddf9ce4fbc19dc07664e01a7609ec4f68",
+      "size": 1346250,
+      "title": "情報セキュリティ研修",
+      "lang": "ja"
+    },
+    {
+      "id": "city-budget-ja",
+      "file": "city-budget-ja.play.ega.html",
+      "sha256": "ab4678f5bb28d907cbd6edc3f83ac48741bff69c02d517f3f9ae14d14e8837de",
+      "size": 1260921,
+      "title": "A 市の予算 2027 年度",
+      "lang": "ja"
+    },
+    {
+      "id": "city-budget-en",
+      "file": "city-budget-en.play.ega.html",
+      "sha256": "1ca075c5fed71c779910d6bfa09f6d01ba23a8b49e5688263c060cceb17dc47a",
+      "size": 1116072,
+      "title": "City A budget 2027",
+      "lang": "en"
+    },
+    {
+      "id": "hand-hygiene",
+      "file": "hand-hygiene.play.ega.html",
+      "sha256": "b0ef869a06699eed365d31939f5bd232423474ab5f02304a434e49089f520370",
+      "size": 1317050,
+      "title": "手指衛生の 5 つのタイミング",
+      "lang": "ja"
+    },
+    {
+      "id": "hazard-map",
+      "file": "hazard-map.play.ega.html",
+      "sha256": "b5a3bf15c6eba9b71ff008d5a8460197959934e3430a71670fcf5ac6fa745d13",
+      "size": 1355438,
+      "title": "大雨のとき、どこへ逃げる？",
+      "lang": "ja"
+    }
+  ]
+}

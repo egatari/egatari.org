@@ -1,0 +1,11 @@
+/* /gallery/play/: the site's header in one slim row, and the player filling the rest of the screen */
+html, body.play-page { height: 100%; }
+body.play-page { display: flex; flex-direction: column; min-height: 100dvh; height: 100dvh; overflow: hidden; }
+.play-head { display: flex; align-items: center; gap: .5rem 1.25rem; flex-wrap: wrap; padding: .5rem var(--gutter); border-bottom: 1px solid var(--line); line-height: 1.4; }
+.play-head .brand { font-size: 1.0625rem; }
+.play-head .brand img { width: 32px; height: 32px; }
+.play-head .back { font-size: .9375rem; white-space: nowrap; }
+.play-title { font-size: 1rem; margin: 0; font-weight: 700; min-width: 0; flex: 1 1 12em; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+#egatari-player { flex: 1; min-height: 0; }
+/* the player's colours from the site's own tokens (light and dark) */
+#egatari-player, #link-box { --bg: var(--ground); --fg: var(--ink); --accent: var(--brand); --accent-fg: var(--on-brand); }

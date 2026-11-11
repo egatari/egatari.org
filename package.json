@@ -1,0 +1,9 @@
+{
+  "name": "egatari-org",
+  "private": true,
+  "description": "egatari.org: tests of the assembled site (tools/test-gallery-play.mjs)",
+  "type": "module",
+  "devDependencies": {
+    "playwright-core": "1.64.1"
+  }
+}

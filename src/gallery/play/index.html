@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; media-src data: blob:; connect-src 'self'; worker-src 'none'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="referrer" content="no-referrer">
+<meta name="robots" content="noindex">
+<title>見本：Egatari</title>
+<meta name="color-scheme" content="light dark">
+<link rel="icon" href="/assets/logo/egatari-light.svg" type="image/svg+xml">
+<link rel="stylesheet" href="/assets/site.css">
+<link rel="stylesheet" href="site-play.css">
+<link rel="stylesheet" href="page.css">
+<script type="module" src="site-play.js"></script>
+</head>
+<body class="play-page">
+<!-- The page that plays one sample: /gallery/play/?id=<id>. The player (site-play.js, site-play.css) is Egatari Studio's site
+     player, vendored from the build in BUILD.json; its policy is the <meta> above (GitHub Pages cannot send headers). The lesson
+     files are /gallery/files/<id>.ega.bin, written by the build (tools/gallery_files.py) and checked against samples.lock.json. -->
+<a class="skip" href="#egatari-player">本文へ</a>
+<header class="play-head">
+  <a class="brand" href="/"><picture><source srcset="/assets/logo/egatari-dark.svg" media="(prefers-color-scheme: dark)"><img src="/assets/logo/egatari-light.svg" alt="" width="32" height="32"></picture>Egatari</a>
+  <a class="back" href="/gallery/">見本の一覧へ</a>
+  <h1 class="play-title" data-player-title></h1>
+</header>
+<main id="egatari-player" tabindex="-1" data-lock="/gallery/samples.lock.json" data-files="/gallery/files/"></main>
+</body>
+</html>

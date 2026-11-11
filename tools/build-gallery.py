@@ -5,12 +5,12 @@ Run locally after editing lessons.json and commit both files:
 
     python3 tools/build-gallery.py
 
-Standard library only. The lesson files themselves are NOT hosted here: the
-download links point at the egatari/examples release, and playing in the
-browser is served by viewer.egatari.org (spec §10.1 needs a sandboxing CSP
-header that GitHub Pages cannot send): each lesson's playUrl in lessons.json.
-Set "play_live": true there to turn the 「ブラウザで見る（準備中）」 placeholders
-into links once the viewer is live.
+Standard library only. The lesson files themselves are NOT committed here: the
+download links point at the egatari/examples release, and 「ブラウザで見る」 opens
+/gallery/play/?id=<id> (each lesson's playUrl), which plays the play-only file
+that the site build fetched and checked against src/gallery/samples.lock.json
+(tools/gallery_files.py). Set "play_live": false in lessons.json to show the
+「ブラウザで見る（準備中）」 placeholders instead.
 """
 from __future__ import annotations
 

@@ -57,6 +57,20 @@ jobs:
       - name: Prove the new build serves every spec URL the old build does
         run: python3 tools/compare-urls.py spec-site _site src
 
+      - name: Fetch the sample lessons pinned by src/gallery/samples.lock.json (checked byte for byte; written as /gallery/files/<id>.ega.bin)
+        run: python3 tools/gallery_files.py fetch _site
+
+      - name: Set up Node for the gallery player check
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Check /gallery/play/ in the assembled site (the vendored player, its policy, every lesson, the refusals)
+        run: |
+          npm ci --ignore-scripts
+          npx playwright-core install --with-deps chromium
+          node tools/test-gallery-play.mjs _site
+
       - name: Upload assembled site as a workflow artifact
         uses: actions/upload-artifact@v4
         with:
