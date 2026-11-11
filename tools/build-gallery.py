@@ -61,7 +61,7 @@ FOOT = """</main>
 
 <footer class="site-foot">
   <div class="wrap">
-    <p>© 2026 雲居玄道 ・ サイトの文と画像は CC BY 4.0</p>
+    <p>© 2026 雲居玄道 ・ サイトの文と画像は CC BY 4.0（ロゴを除く）</p>
     <ul>
       <li><a href="/spec/">仕様</a></li>
       <li><a href="https://github.com/egatari">GitHub</a></li>
@@ -115,7 +115,7 @@ def main() -> int:
     parts = [HEAD]
     parts.append("""  <div class="wrap page-head">
     <h1 class="page-title">見本</h1>
-    <p class="page-lead">どれも Egatari で作った教材です。開いて再生し、編集アプリで中を見ることもできます。</p>
+    <p class="page-lead">どれも Egatari で作った教材です。ダウンロードしたファイルは、ブラウザで開けば再生できます。編集できる版は、編集アプリで開くと中を見られます。</p>
     <ul class="toc">
 """)
     for s in sections:
