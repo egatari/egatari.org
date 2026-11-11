@@ -163,6 +163,34 @@ a:hover { text-decoration-thickness: 2px; }
 .sec p { max-width: var(--measure); margin: 0 0 1rem; }
 .sec-body > :last-child { margin-bottom: 0; }
 
+/* Sections 01–04: the text beside a real screenshot of the software.
+   Desktop: two columns, the text on the left in 01 and 03, on the right in
+   02 and 04 (.flip). Phones: stacked, text first. The screenshot sits in a
+   light frame, the daylight sibling of the hero's player frame. Every <img>
+   carries width and height, so nothing shifts while it loads. */
+.sec-media { display: grid; gap: clamp(2rem, 4vw, 3.5rem); align-items: center; }
+.sec-text { min-width: 0; }
+.shot {
+  margin: 0; min-width: 0;
+  background: var(--ground); border: 1px solid var(--line);
+  border-radius: 14px; padding: clamp(6px, .8vw, 12px);
+  box-shadow: var(--shadow);
+}
+.shot img { width: 100%; border-radius: 6px; }
+.shot figcaption { font-size: 1rem; line-height: 1.6; color: var(--muted); margin: .7rem .25rem .1rem; }
+@media (min-width: 64rem) {
+  .sec-media { grid-template-columns: minmax(0, 1fr) minmax(0, 1.6fr); }
+  .sec-media.flip { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
+  .sec-media.flip .sec-text { order: 2; }
+  .sec-media.flip.phone { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); }
+  /* 02: three frames in a row are too small beside the text, so the strip
+     takes the full width under it; the text keeps its place on the right. */
+  .sec-media.wide { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: start; }
+  .sec-media.wide .sec-text { grid-column: 2; order: 0; }
+  .sec-media.wide .shot { grid-column: 1 / -1; }
+}
+.sec-media.phone .shot { max-width: 34rem; width: 100%; justify-self: center; }
+
 /* areas */
 .areas { list-style: none; padding: 0; margin: 2.25rem 0 0; display: grid; gap: 1.5rem; }
 @media (min-width: 48rem) { .areas { grid-template-columns: repeat(3, 1fr); } }

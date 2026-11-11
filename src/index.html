@@ -49,45 +49,76 @@
 
 <main id="main">
   <section class="sec" aria-labelledby="s01">
-    <div class="wrap sec-grid">
-      <p class="num" aria-hidden="true">01</p>
-      <div class="sec-body">
-        <h2 id="s01">1 つのファイルに、全部入る</h2>
-        <p>スライド・台本・音声・本を、1 つの HTML ファイル（.ega.html）にまとめます。ブラウザで開けばそのまま再生でき、編集アプリで開けば直せます。メールで送る、校内のサーバーに置く、LMS に載せる（SCORM）。どれも、そのファイル 1 つです。</p>
+    <div class="wrap sec-grid sec-media">
+      <div class="sec-text">
+        <p class="num" aria-hidden="true">01</p>
+        <div class="sec-body">
+          <h2 id="s01">1 つのファイルに、全部入る</h2>
+          <p>スライド・台本・音声・本を、1 つの HTML ファイル（.ega.html）にまとめます。ブラウザで開けばそのまま再生でき、編集アプリで開けば直せます。メールで送る、校内のサーバーに置く、LMS に載せる（SCORM）。どれも、そのファイル 1 つです。</p>
+        </div>
       </div>
+      <figure class="shot">
+        <img src="/assets/sections/01.webp" width="1400" height="902" loading="lazy" decoding="async"
+             alt="編集アプリで見本「Egatari の紹介」を開いた画面。左にスライド「話す順に、図が組み上がる」（売上・会員数・解約率の数字と、四半期ごとの売上の棒グラフ）、右に同じステップの台本の欄が並んでいる。">
+        <figcaption>編集アプリ：スライドと、そのステップの台本</figcaption>
+      </figure>
     </div>
   </section>
 
   <section class="sec" aria-labelledby="s02">
-    <div class="wrap sec-grid">
-      <p class="num" aria-hidden="true">02</p>
-      <div class="sec-body">
-        <h2 id="s02">話す順に、見せる</h2>
-        <p>説明する順に、図や式を 1 つずつ出します（ステップ）。台本を付ければ、読み上げの音声と字幕が付き、動画にも書き出せます。</p>
+    <div class="wrap sec-grid sec-media flip wide">
+      <div class="sec-text">
+        <p class="num" aria-hidden="true">02</p>
+        <div class="sec-body">
+          <h2 id="s02">話す順に、見せる</h2>
+          <p>説明する順に、図や式を 1 つずつ出します（ステップ）。台本を付ければ、読み上げの音声と字幕が付き、動画にも書き出せます。</p>
+        </div>
       </div>
+      <figure class="shot">
+        <picture>
+          <source media="(max-width: 40rem)" srcset="/assets/sections/02-stack.webp" width="800" height="1382">
+          <img src="/assets/sections/02.webp" width="2432" height="450" loading="lazy" decoding="async"
+               alt="見本「月の満ち欠け」の同じスライドを、ステップ 0・1・2 の順に 3 枚並べたもの。ステップ 0 は地球と月だけ。1 で太陽の光と、月の光っている半分が加わり、2 で地球から見える半分と、見る向きの点線が加わる。どの画面にも、そのステップの台本が字幕で出ている。">
+        </picture>
+        <figcaption>同じスライドの、ステップ 0・1・2（字幕つき）</figcaption>
+      </figure>
     </div>
   </section>
 
   <section class="sec" aria-labelledby="s03">
-    <div class="wrap sec-grid">
-      <p class="num" aria-hidden="true">03</p>
-      <div class="sec-body">
-        <h2 id="s03">AI が書き、品質チェックが直す</h2>
-        <p>チャットの AI に題材を伝えると、教材の原稿ができます。品質チェックが、文字のはみ出し・小さすぎる字・色のコントラスト・画像の代替テキストを調べ、直す依頼の文まで作ります。</p>
+    <div class="wrap sec-grid sec-media">
+      <div class="sec-text">
+        <p class="num" aria-hidden="true">03</p>
+        <div class="sec-body">
+          <h2 id="s03">AI が書き、品質チェックが直す</h2>
+          <p>チャットの AI に題材を伝えると、教材の原稿ができます。品質チェックが、文字のはみ出し・小さすぎる字・色のコントラスト・画像の代替テキストを調べ、直す依頼の文まで作ります。</p>
+        </div>
       </div>
+      <figure class="shot">
+        <img src="/assets/sections/03.webp" width="1400" height="902" loading="lazy" decoding="async"
+             alt="編集アプリで品質チェックをした画面。左のスライドでは、本文の文章が下の端からはみ出している。右の品質チェックの欄には「本文が下にはみ出す（737 > 565px）」と「スライドの字に です・ます がある」の 2 つのエラーと、「AI への修正依頼をコピー」のボタンが出ている。">
+        <figcaption>品質チェック：見本「月の満ち欠け」の 1 枚に長い文を足して試したもの</figcaption>
+      </figure>
     </div>
   </section>
 
   <section class="sec" aria-labelledby="s04">
-    <div class="wrap sec-grid">
-      <p class="num" aria-hidden="true">04</p>
-      <div class="sec-body">
-        <h2 id="s04">学習者の手元で、読み返す</h2>
-        <p>学習者はスマートフォンやタブレットで、自分のペースで読み返せます。本の形で読む、ハイライトを引く、暗記のために隠す。引いたハイライトはその端末の中だけに残り、ファイルにも、どこにも送られません。</p>
-        <ul class="links">
-          <li><a href="https://viewer.egatari.org/">Egatari Viewer を開く</a></li>
-        </ul>
+    <div class="wrap sec-grid sec-media flip phone">
+      <div class="sec-text">
+        <p class="num" aria-hidden="true">04</p>
+        <div class="sec-body">
+          <h2 id="s04">学習者の手元で、読み返す</h2>
+          <p>学習者はスマートフォンやタブレットで、自分のペースで読み返せます。本の形で読む、ハイライトを引く、暗記のために隠す。引いたハイライトはその端末の中だけに残り、ファイルにも、どこにも送られません。</p>
+          <ul class="links">
+            <li><a href="https://viewer.egatari.org/">Egatari Viewer を開く</a></li>
+          </ul>
+        </div>
       </div>
+      <figure class="shot">
+        <img src="/assets/sections/04.webp" width="984" height="1039" loading="lazy" decoding="async"
+             alt="スマートフォンの Egatari Viewer で、見本「生成AIの利活用ガイドラインを読む」の本を開いた画面を 2 つ並べたもの。左は本文の 3 か所に黄・青・桃のハイライトを引いたところ。右は暗記をオンにして、ハイライトした語を同じ色の帯で隠したところ。">
+        <figcaption>Egatari Viewer：ハイライト（左）と暗記（右）</figcaption>
+      </figure>
     </div>
   </section>
 
