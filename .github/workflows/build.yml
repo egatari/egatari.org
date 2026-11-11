@@ -1,0 +1,58 @@
+name: Build site
+
+on:
+  push:
+  workflow_dispatch:
+    inputs:
+      spec_tag:
+        description: "egatari-spec tag to build the specification from"
+        required: false
+        default: "wd-2026-11-10"
+
+permissions:
+  contents: read
+
+env:
+  SPEC_TAG: ${{ github.event.inputs.spec_tag || 'wd-2026-11-10' }}
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out egatari.org (this repo)
+        uses: actions/checkout@v4
+
+      - name: Check out egatari-spec at ${{ env.SPEC_TAG }}
+        uses: actions/checkout@v4
+        with:
+          repository: egatari/egatari-spec
+          ref: ${{ env.SPEC_TAG }}
+          path: spec-src
+
+      - name: Build the spec alone (same Jekyll build GitHub Pages uses)
+        uses: actions/jekyll-build-pages@v1
+        with:
+          source: spec-src
+          destination: spec-site
+
+      - name: Assemble egatari.org (spec moves to /spec/, add landing + robots.txt)
+        run: |
+          set -eu
+          OUT="_site"
+          rm -rf "${OUT:?}"
+          mkdir -p "$OUT"
+          cp -R spec-site/. "$OUT"/
+          mkdir -p "$OUT/spec"
+          mv "$OUT/index.html" "$OUT/spec/index.html"
+          cp src/index.html "$OUT/index.html"
+          cp src/robots.txt "$OUT/robots.txt"
+
+      - name: Prove the new build serves every spec URL the old build does
+        run: python3 tools/compare-urls.py spec-site _site
+
+      - name: Upload assembled site as a workflow artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: egatari-org-site
+          path: _site
+          if-no-files-found: error
