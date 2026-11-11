@@ -1,9 +1,9 @@
 {
   "studio": "0.6.9",
-  "commit": "daa8cb503b033534563a51aecdee6361b95a67c3",
-  "version": "0.6.9-daa8cb503b",
+  "commit": "f2e67930aef0d26891ab8b908ce025da126f259b",
+  "version": "0.6.9-f2e67930ae",
   "sha256": {
-    "site-play.js": "49018f09f9e9ddc30265f967db504f873902ec6a7e9899f839ac263e0d03b720",
+    "site-play.js": "07d9365808b2ae297cbf5a2f6bcece0af9b9644cf66b53abfc5f04ed5ad70130",
     "site-play.css": "5a0165a9c6ad3883480a425f4038af161ec22f107d90257c9b0278487eb5168b"
   },
   "pageCsp": "default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; media-src data: blob:; connect-src 'self'; worker-src 'none'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
