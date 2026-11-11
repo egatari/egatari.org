@@ -11,6 +11,11 @@ on:
 
 permissions:
   contents: read
+  # Read-only: lets jekyll-github-metadata's Pages lookup (triggered by
+  # jekyll-relative-links while rendering egatari-spec) get a graceful 404
+  # for this repo instead of a fatal 403. This repo has no Pages enabled
+  # and this workflow never deploys to Pages or enables it.
+  pages: read
 
 env:
   SPEC_TAG: ${{ github.event.inputs.spec_tag || 'wd-2026-11-10' }}
