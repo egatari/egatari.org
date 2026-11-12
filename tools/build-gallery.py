@@ -74,7 +74,7 @@ FOOT = """</main>
 """
 
 
-def card(lesson: dict, base: str, play_live: bool) -> str:
+def card(lesson: dict, base: str, play_live: bool, level: int = 3) -> str:
     lid = lesson["id"]
     title = escape(lesson["title"])
     lang = lesson.get("lang", "ja")
@@ -89,7 +89,7 @@ def card(lesson: dict, base: str, play_live: bool) -> str:
     )
     return f"""      <li class="card">
         <img src="/gallery/{escape(lesson["cover"])}" width="640" height="360" alt="{title}の表紙" loading="lazy">
-        <h3 id="l-{escape(lid)}">{title_html}{tag}</h3>
+        <h{level} id="l-{escape(lid)}">{title_html}{tag}</h{level}>
         <ul aria-labelledby="l-{escape(lid)}">
           <li><a href="{escape(base + lesson["portable"])}">ダウンロード（編集できる版）</a></li>
           <li><a href="{escape(base + lesson["play"])}">ダウンロード（見るだけの版）</a></li>
@@ -104,9 +104,25 @@ def main() -> int:
     base = data["download_base"]
     sections = data["sections"]
     known = {s["id"] for s in sections}
+    subjects = data.get("subjects", [])
+    min_lessons = data.get("grouping", {}).get("minLessons", 7)
+    order = {l["id"]: i for i, l in enumerate(data["lessons"])}
+
+    def subject_key(lesson: dict):
+        sub = lesson.get("subject")
+        return (subjects.index(sub) if sub in subjects else len(subjects), order[lesson["id"]])
+
+    groups_of = {s["id"]: {g["id"] for g in s.get("groups", [])} for s in sections}
     for lesson in data["lessons"]:
         if lesson["section"] not in known:
             print(f"error: {lesson['id']}: unknown section {lesson['section']!r}", file=sys.stderr)
+            return 1
+        gs = groups_of[lesson["section"]]
+        if gs and lesson.get("group") not in gs:
+            print(f"error: {lesson['id']}: section {lesson['section']!r} needs a group from {sorted(gs)}", file=sys.stderr)
+            return 1
+        if lesson.get("group") == "class" and lesson.get("subject") not in subjects:
+            print(f"error: {lesson['id']}: a class lesson needs a subject from {subjects}", file=sys.stderr)
             return 1
         if not (ROOT / "src" / "gallery" / lesson["cover"]).is_file():
             print(f"error: {lesson['id']}: cover not found: {lesson['cover']}", file=sys.stderr)
@@ -128,11 +144,25 @@ def main() -> int:
         parts.append(f'      <h2 id="h-{sid}">{escape(s["title"])}</h2>\n')
         if s.get("subtitle"):
             parts.append(f'      <p class="sub">{escape(s["subtitle"])}</p>\n')
-        parts.append('      <ul class="cards">\n')
-        for lesson in data["lessons"]:
-            if lesson["section"] == s["id"]:
-                parts.append(card(lesson, base, bool(data.get("play_live"))))
-        parts.append("      </ul>\n    </div>\n  </section>\n\n")
+        mine = [l for l in data["lessons"] if l["section"] == s["id"]]
+        live = bool(data.get("play_live"))
+        if s.get("groups") and len(mine) >= min_lessons:
+            for g in s["groups"]:
+                inside = sorted((l for l in mine if l["group"] == g["id"]), key=subject_key)
+                if not inside:
+                    continue
+                gid = escape(f'{s["id"]}-{g["id"]}')
+                parts.append(f'      <h3 class="ggroup" id="h-{gid}">{escape(g["title"])}</h3>\n')
+                parts.append('      <ul class="cards">\n')
+                for lesson in inside:
+                    parts.append(card(lesson, base, live, level=4))
+                parts.append("      </ul>\n")
+        else:
+            parts.append('      <ul class="cards">\n')
+            for lesson in mine:
+                parts.append(card(lesson, base, live))
+            parts.append("      </ul>\n")
+        parts.append("    </div>\n  </section>\n\n")
 
     parts.append(FOOT)
     OUT.write_text("".join(parts), encoding="utf-8")

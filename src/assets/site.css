@@ -240,12 +240,14 @@ a:hover { text-decoration-thickness: 2px; }
 .cards { list-style: none; padding: 0; margin: 0; display: grid; gap: 2.5rem 2rem; grid-template-columns: repeat(auto-fill, minmax(min(100%, 19rem), 1fr)); }
 .card { display: flex; flex-direction: column; min-width: 0; }
 .card img { border-radius: 8px; box-shadow: var(--shadow); aspect-ratio: 16 / 9; width: 100%; object-fit: cover; background: var(--card); }
-.card h3 { font-size: 1.1875rem; line-height: 1.5; margin: 1rem 0 .4rem; }
+.card h3, .card h4 { font-size: 1.1875rem; line-height: 1.5; margin: 1rem 0 .4rem; }
 .lang { display: inline-block; font-size: 1rem; font-weight: 700; line-height: 1.4; border: 1.5px solid currentColor; border-radius: 4px; padding: 0 .4em; margin-left: .4em; vertical-align: .12em; color: var(--muted); }
 .card ul { list-style: none; padding: 0; margin: .25rem 0 0; display: grid; gap: .3rem; font-size: 1rem; }
 .card .soon { color: var(--muted); }
 .note { max-width: var(--measure); color: var(--muted); font-size: 1rem; margin: 0; }
 .gsec h2 + .cards { margin-top: 2rem; }
+.gsec .ggroup { font-size: 1.25rem; line-height: 1.5; color: var(--brand); margin: 2.5rem 0 1.25rem; padding-bottom: .4rem; border-bottom: 1px solid var(--line); }
+.gsec .sub + .ggroup { margin-top: 1rem; }
 
 @media (prefers-reduced-motion: no-preference) { html { scroll-behavior: smooth; } }
 h1, h2, h3, .area-name { word-break: auto-phrase; text-wrap: balance; }
