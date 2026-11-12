@@ -59,16 +59,6 @@
       "playUrl": "/gallery/play/?id=egatari-intro-en"
     },
     {
-      "id": "egatari-cm",
-      "title": "Egatari 15 秒",
-      "section": "intro",
-      "lang": "ja",
-      "portable": "egatari-cm.ega.html",
-      "play": "egatari-cm.play.ega.html",
-      "cover": "covers/egatari-cm.webp",
-      "playUrl": "/gallery/play/?id=egatari-cm"
-    },
-    {
       "id": "parts-showcase",
       "title": "パーツ図鑑",
       "section": "intro",
