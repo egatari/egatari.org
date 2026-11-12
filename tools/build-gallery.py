@@ -130,7 +130,7 @@ def main() -> int:
     parts = [HEAD]
     parts.append("""  <div class="wrap page-head">
     <h1 class="page-title">サンプル</h1>
-    <p class="page-lead">どれも Egatari で作った教材です。ダウンロードしたファイルは、ブラウザで開けば再生できます。Egatari ファイルは、編集アプリで開くと中を見て直せます。再生専用は、学習者に配るための版です。</p>
+    <p class="page-lead">どれも Egatari で作った教材です。ダウンロードしたファイルは、ブラウザで開けば再生できます。Egatari ファイルは、編集アプリで開くと中を見て直せます。再生専用は、学習者に配るためのファイルで、編集はできません。</p>
     <ul class="toc">
 """)
     for s in sections:
