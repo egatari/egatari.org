@@ -10,7 +10,7 @@ download links point at the egatari/examples release, and 「ブラウザで見�
 /gallery/play/?id=<id> (each lesson's playUrl), which plays the play-only file
 that the site build fetched and checked against src/gallery/samples.lock.json
 (tools/gallery_files.py). Set "play_live": false in lessons.json to show the
-「ブラウザで見る（準備中）」 placeholders instead.
+「再生（準備中）」 placeholders instead.
 """
 from __future__ import annotations
 
@@ -83,16 +83,16 @@ def card(lesson: dict, base: str, play_live: bool, level: int = 3) -> str:
         f' <span class="lang">{escape(LANG_LABEL.get(lang, lang))}</span>' if lang != "ja" else ""
     )
     play = (
-        f'<li><a href="{escape(lesson["playUrl"])}">ブラウザで見る</a></li>'
+        f'<li><a href="{escape(lesson["playUrl"])}">再生</a></li>'
         if play_live
-        else '<li class="soon"><span>ブラウザで見る（準備中）</span></li>'
+        else '<li class="soon"><span>再生（準備中）</span></li>'
     )
     return f"""      <li class="card">
-        <img src="/gallery/{escape(lesson["cover"])}" width="640" height="360" alt="{title}の表紙" loading="lazy">
+        <img src="/gallery/{escape(lesson["cover"])}" width="640" height="360" alt="{title}のサムネイル" loading="lazy">
         <h{level} id="l-{escape(lid)}">{title_html}{tag}</h{level}>
         <ul aria-labelledby="l-{escape(lid)}">
-          <li><a href="{escape(base + lesson["portable"])}">ダウンロード（編集できる版）</a></li>
-          <li><a href="{escape(base + lesson["play"])}">ダウンロード（見るだけの版）</a></li>
+          <li><a href="{escape(base + lesson["portable"])}">ダウンロード（Egatari ファイル）</a></li>
+          <li><a href="{escape(base + lesson["play"])}">ダウンロード（再生専用）</a></li>
           {play}
         </ul>
       </li>
@@ -131,7 +131,7 @@ def main() -> int:
     parts = [HEAD]
     parts.append("""  <div class="wrap page-head">
     <h1 class="page-title">サンプル</h1>
-    <p class="page-lead">どれも Egatari で作った教材です。ダウンロードしたファイルは、ブラウザで開けば再生できます。編集できる版は、編集アプリで開くと中を見られます。</p>
+    <p class="page-lead">どれも Egatari で作った教材です。ダウンロードしたファイルは、ブラウザで開けば再生できます。Egatari ファイルは、編集アプリで開くと中を見て直せます。再生専用は、学習者に配るための版です。</p>
     <ul class="toc">
 """)
     for s in sections:
