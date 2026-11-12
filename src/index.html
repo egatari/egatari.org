@@ -15,6 +15,24 @@
 <body>
 <a class="skip" href="#main">本文へ</a>
 
+<p class="notice notice-lang" lang="en" hidden>This page is in Japanese. <a href="/en/" hreflang="en">English version →</a><button type="button" class="notice-close" aria-label="Close">×</button></p>
+<script>
+/* Language hint: shown only when no browser language is Japanese; never redirects. Closing it is remembered on this device. */
+(function () {
+  var el = document.querySelector('.notice-lang');
+  var langs = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || ''];
+  var ja = false;
+  for (var i = 0; i < langs.length; i++) if (/^ja\b/i.test(langs[i])) ja = true;
+  var closed = false;
+  try { closed = localStorage.getItem('egatari-lang-hint') === 'closed'; } catch (e) {}
+  if (ja || closed) return;
+  el.hidden = false;
+  el.querySelector('.notice-close').addEventListener('click', function () {
+    el.hidden = true;
+    try { localStorage.setItem('egatari-lang-hint', 'closed'); } catch (e) {}
+  });
+})();
+</script>
 <p class="notice">Egatari 1.0 の仕様は作業中の草案です。<a href="/spec/">仕様を読む</a></p>
 
 <header class="hero">
