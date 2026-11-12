@@ -6,7 +6,7 @@ Run locally after editing lessons.json and commit both files:
     python3 tools/build-gallery.py
 
 Standard library only. The lesson files themselves are NOT committed here: the
-download links point at the egatari/examples release, and 「ブラウザで見る」 opens
+download links point at the egatari/examples release, and 「再生」 opens
 /gallery/play/?id=<id> (each lesson's playUrl), which plays the play-only file
 that the site build fetched and checked against src/gallery/samples.lock.json
 (tools/gallery_files.py). Set "play_live": false in lessons.json to show the
