@@ -31,8 +31,8 @@ HEAD = """<!DOCTYPE html>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex">
-<title>見本：Egatari</title>
-<meta name="description" content="Egatari で作った教材の見本。">
+<title>サンプル：Egatari</title>
+<meta name="description" content="Egatari で作った教材のサンプル。">
 <meta name="color-scheme" content="light dark">
 <link rel="icon" href="/assets/logo/egatari-light.svg" type="image/svg+xml">
 <link rel="stylesheet" href="/assets/site.css">
@@ -47,7 +47,7 @@ HEAD = """<!DOCTYPE html>
   <div class="wrap site-head">
     <a class="brand" href="/"><picture><source srcset="/assets/logo/egatari-dark.svg" media="(prefers-color-scheme: dark)"><img src="/assets/logo/egatari-light.svg" alt="" width="48" height="48"></picture>Egatari</a>
     <nav class="site-nav" aria-label="サイト">
-      <a href="/gallery/" aria-current="page">見本</a>
+      <a href="/gallery/" aria-current="page">サンプル</a>
       <a href="/spec/">仕様</a>
       <a href="https://github.com/egatari">GitHub</a>
     </nav>
@@ -65,7 +65,7 @@ FOOT = """</main>
     <ul>
       <li><a href="/spec/">仕様</a></li>
       <li><a href="https://github.com/egatari">GitHub</a></li>
-      <li><a href="/gallery/">見本</a></li>
+      <li><a href="/gallery/">サンプル</a></li>
     </ul>
   </div>
 </footer>
@@ -114,7 +114,7 @@ def main() -> int:
 
     parts = [HEAD]
     parts.append("""  <div class="wrap page-head">
-    <h1 class="page-title">見本</h1>
+    <h1 class="page-title">サンプル</h1>
     <p class="page-lead">どれも Egatari で作った教材です。ダウンロードしたファイルは、ブラウザで開けば再生できます。編集できる版は、編集アプリで開くと中を見られます。</p>
     <ul class="toc">
 """)
