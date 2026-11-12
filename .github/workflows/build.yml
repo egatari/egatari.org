@@ -11,10 +11,9 @@ on:
 
 permissions:
   contents: read
-  # Read-only: lets jekyll-github-metadata's Pages lookup (triggered by
-  # jekyll-relative-links while rendering egatari-spec) get a graceful 404
-  # for this repo instead of a fatal 403. This repo has no Pages enabled
-  # and this workflow never deploys to Pages or enables it.
+  # Read-only for the build: jekyll-github-metadata's Pages lookup (triggered by
+  # jekyll-relative-links while rendering egatari-spec) needs it. Only the
+  # deploy job below, on main, gets write access.
   pages: read
 
 env:
@@ -77,3 +76,28 @@ jobs:
           name: egatari-org-site
           path: _site
           if-no-files-found: error
+
+      - name: Upload the site for GitHub Pages (main only)
+        if: github.ref == 'refs/heads/main'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    # egatari.org is served from here since the cutover (handoff/site-repo-2026-11-11.md, step 4).
+    if: github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    concurrency:
+      group: pages
+      cancel-in-progress: false
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
