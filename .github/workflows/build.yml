@@ -18,8 +18,35 @@ permissions:
 
 env:
   SPEC_TAG: ${{ github.event.inputs.spec_tag || 'wd-2026-11-10' }}
+  # Egatari Studio commit whose glossary (docs/terms.json) and lint-terms.mjs check
+  # the site's wording. Move to the v0.6.11 tag once it exists.
+  STUDIO_TERMS_SHA: 6ec281553b4c93a992de306e410f7ed20cf66805
 
 jobs:
+  terms:
+    # The site's words follow Egatari Studio's glossary (バージョン, ツール, サンプル, Egatari Studio, ...).
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out egatari.org (this repo)
+        uses: actions/checkout@v4
+        with:
+          path: site
+
+      - name: Check out egatari-studio at the pinned glossary commit
+        uses: actions/checkout@v4
+        with:
+          repository: egatari/egatari-studio
+          ref: ${{ env.STUDIO_TERMS_SHA }}
+          path: studio
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Check the site's wording against the glossary (site-specific exceptions in tools/terms-allow.site.json)
+        working-directory: studio
+        run: node tools/lint-terms.mjs --prose ../site/src --exclude 'gallery/play/site-play.js' --allow ../site/tools/terms-allow.site.json
+
   build:
     runs-on: ubuntu-latest
     steps:
@@ -86,7 +113,7 @@ jobs:
   deploy:
     # egatari.org is served from here since the cutover (handoff/site-repo-2026-11-11.md, step 4).
     if: github.ref == 'refs/heads/main'
-    needs: build
+    needs: [build, terms]
     runs-on: ubuntu-latest
     permissions:
       pages: write
