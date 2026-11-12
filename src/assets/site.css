@@ -101,6 +101,11 @@ a:hover { text-decoration-thickness: 2px; }
 .site-nav { display: flex; gap: 1.5rem; font-size: 1rem; }
 .site-nav a { text-decoration: none; color: var(--ink); font-weight: 700; }
 .site-nav a:hover { color: var(--brand); text-decoration: underline; }
+/* Narrow phones: names never break inside a word; the nav moves under the brand if it must */
+.site-head { flex-wrap: wrap; }
+.brand, .site-nav a { white-space: nowrap; }
+.site-nav { flex-wrap: wrap; row-gap: .25rem; }
+@media (max-width: 30rem) { .site-nav { column-gap: 1.1rem; } }
 
 /* Hero: light. The lesson sits large on a "screen" with a player bar. */
 .hero { background: var(--ground-alt); border-bottom: 1px solid var(--line); }
