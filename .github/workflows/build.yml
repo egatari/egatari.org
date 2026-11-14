@@ -20,7 +20,7 @@ env:
   SPEC_TAG: ${{ github.event.inputs.spec_tag || 'wd-2026-11-10' }}
   # Egatari Studio commit whose glossary (docs/terms.json) and lint-terms.mjs check
   # the site's wording. Move to the v0.6.11 tag once it exists.
-  STUDIO_TERMS_SHA: 6ec281553b4c93a992de306e410f7ed20cf66805
+  STUDIO_TERMS_SHA: fd2be27273eed51a2d410c2b087363eb504bb32f # v0.6.11
 
 jobs:
   terms:
