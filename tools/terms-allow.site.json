@@ -3,6 +3,7 @@
   "allow": [
     { "file": "**/*.html", "pattern": "class=\"skip\"[^>]*>本文へ", "term": "read-in-book", "reason": "Skip link to the page's main content (web convention), not the book view." },
     { "file": "**", "pattern": "生成AIの利活用ガイドライン", "term": "made-with", "reason": "Title of a sample lesson." },
-    { "file": "en/index.html", "pattern": "Copy a fix request for your AI", "term": "exported-file", "reason": "Quotes the editor's button label." }
+    { "file": "en/index.html", "pattern": "Copy a fix request for your AI", "term": "exported-file", "reason": "Quotes the editor's button label." },
+    { "file": "**/*.html", "pattern": "お知らせ", "term": "finding", "reason": "お知らせ (notices, a kind of public guide in the 生活 area), not a checker finding." }
   ]
 }
