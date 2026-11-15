@@ -7,7 +7,7 @@ Status: serves https://egatari.org/ since the cutover after Egatari Studio v0.6.
 ## How the site is built (plan)
 
 - `/` is the landing page, `/en/` its English version, and `/gallery/` the example lessons (in Japanese; some lessons are in English). Their source lives here.
-- On main, the workflow deploys the assembled site to GitHub Pages (custom domain egatari.org). The specification is built from a pinned tag of `egatari/egatari-spec` (for example `wd-2026-11-10`), and every URL it has today is kept: `/egatari-1.0`, `/egatari-player-1.0`, `/extensions/…`, `/schema/…`, `/fixtures/…`, `/logo/…`. `https://egatari.org/schema/…` identifiers appear inside lesson files and must never move.
+- On main, the workflow deploys the assembled site to GitHub Pages (custom domain egatari.org). The specification is built from a pinned tag of `egatari/egatari-spec` (for example `wd-2026-11-15`), and every URL it has today is kept: `/egatari-1.0`, `/egatari-player-1.0`, `/extensions/…`, `/schema/…`, `/fixtures/…`, `/logo/…`. `https://egatari.org/schema/…` identifiers appear inside lesson files and must never move.
 - The spec's own front page moves from `/` to `/spec/`.
 - After the switch, egatari-spec no longer publishes Pages. It stays the source of the specification text.
 - `src/` is overlaid on the spec build. It may add paths but never overwrite one the spec build serves (except `index.html`, whose spec page has moved to `/spec/`); `tools/compare-urls.py` checks this before and after assembling, and proves every old URL is byte-identical.

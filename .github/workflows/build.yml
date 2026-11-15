@@ -7,7 +7,7 @@ on:
       spec_tag:
         description: "egatari-spec tag to build the specification from"
         required: false
-        default: "wd-2026-11-10"
+        default: "wd-2026-11-15"
 
 permissions:
   contents: read
@@ -17,10 +17,10 @@ permissions:
   pages: read
 
 env:
-  SPEC_TAG: ${{ github.event.inputs.spec_tag || 'wd-2026-11-10' }}
+  SPEC_TAG: ${{ github.event.inputs.spec_tag || 'wd-2026-11-15' }}
   # Egatari Studio commit whose glossary (docs/terms.json) and lint-terms.mjs check
   # the site's wording. Move to the v0.6.11 tag once it exists.
-  STUDIO_TERMS_SHA: b0c495b25e0a288a55027aad449b46cc900407fc # v0.6.12
+  STUDIO_TERMS_SHA: f447b0395074277b718c19fce69bbc5bb2978217  # Egatari Studio v0.6.13
 
 jobs:
   terms:
