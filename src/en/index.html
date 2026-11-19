@@ -43,7 +43,7 @@
 <main id="main">
   <section class="tree" aria-label="One file, seen three ways">
     <div class="wrap">
-      <p class="file"><span>moon-phases.ega.html</span></p>
+      <p class="file"><span>egatari-intro-en.ega.html</span></p>
       <div class="bus" aria-hidden="true"></div>
       <div class="three">
         <article class="col">
@@ -67,25 +67,25 @@
           <h3>HTML with presentation features</h3>
           <p>Use everything HTML can express. Figures move step by step, and you can export the result as a video. You can link between places in the file, and it can also be read as a book.</p>
           <figure class="view">
-            <img src="/assets/top/moon-slide.webp" width="960" height="540" loading="lazy" decoding="async"
-                 alt="A slide from the Japanese sample “Phases of the Moon”: the Earth and the Moon seen from above the North Pole. Only the thin part where the Moon’s lit half and the half facing the Earth overlap is seen from the Earth, as a crescent lit on the right.">
+            <img src="/assets/top/en/creator-slide.webp" width="960" height="540" loading="lazy" decoding="async"
+                 alt="The slide “Anywhere there is a browser” from the same file: six cards, Any device, Offline too, Just send it, As a video, Live, and Open and edit, above the line “Hand over one HTML file, and it plays”.">
           </figure>
         </article>
         <article class="col">
           <p class="who">For engineers</p>
           <h3>A compiler for slides</h3>
           <p>The quality check inspects the source, and the build turns it into one file with the player inside. Parts are pinned by version and hash.</p>
-          <pre class="view code" role="img" aria-label="The source of a slide, and the commands for the quality check and the build"><span class="d">&lt;!-- moon-phases/deck.html --&gt;</span>
+          <pre class="view code" role="img" aria-label="The source of a slide, and the commands for the quality check and the build"><span class="d">&lt;!-- egatari-intro-en/deck.html --&gt;</span>
 &lt;section class="slide"&gt;
-  &lt;h2&gt;見える形は、2 つの半分の重なり&lt;/h2&gt;
-  &lt;svg viewBox="0 0 1180 420"&gt;…&lt;/svg&gt;
+  &lt;h2&gt;Anywhere there is a browser&lt;/h2&gt;
+  &lt;m-cards layout="grid"&gt;…&lt;/m-cards&gt;
 &lt;/section&gt;
 
-<span class="p">$</span> npx egatari check moon-phases/deck.html
+<span class="p">$</span> npx egatari check egatari-intro-en/deck.html
   <span class="ok">0 errors, 0 warnings</span>
-<span class="p">$</span> npx egatari build moon-phases/deck.html \
+<span class="p">$</span> npx egatari build egatari-intro-en/deck.html \
     --portable
-  <span class="d">→</span> 月の満ち欠け.ega.html</pre>
+  <span class="d">→</span> Introducing Egatari.ega.html</pre>
         </article>
       </div>
     </div>
