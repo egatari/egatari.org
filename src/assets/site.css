@@ -286,3 +286,84 @@ h1, h2, h3, .area-name { word-break: auto-phrase; text-wrap: balance; }
 }
 @media (prefers-color-scheme: dark) { .seal { color: #12121A; box-shadow: inset 0 0 0 2px var(--sun), inset 0 0 0 3.5px #12121A; } }
 @media (max-width: 600px) { .seal { position: static; margin-top: 2rem; } }
+
+/* Top page (2026-11-20): one file at the top, three readers below it
+   (教育者 | 表現者 | 技術者, the centre one marked), then how a file is made,
+   how the parts library grows, the open format and how to use it. */
+.top-hero { text-align: center; padding-top: clamp(1.5rem, 5vw, 3.5rem); }
+.top-hero .eyebrow { color: var(--muted); letter-spacing: .06em; font-size: 1rem; margin: 0; }
+.top-hero .headline { font-size: clamp(1.875rem, 4.4vw, 3.25rem); margin-top: .5rem; }
+.top-hero .lead { max-width: 36em; margin: 1.25rem auto 0; white-space: normal; }
+.top-hero .actions { justify-content: center; }
+
+.tree { padding-block: clamp(2.5rem, 6vw, 4rem) clamp(3rem, 6vw, 5rem); }
+.file { display: flex; justify-content: center; margin: 0; }
+.file span {
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace; font-size: 1rem; line-height: 1.5;
+  background: var(--brand-wash); color: var(--brand-strong); border: 1.5px solid var(--brand);
+  border-radius: 999px; padding: .35rem 1rem; overflow-wrap: normal;
+}
+.file span::before { content: ""; display: inline-block; width: .55em; height: .55em; border-radius: 50%; background: var(--sun); margin-right: .5em; vertical-align: .1em; }
+.bus { display: none; }
+.three { display: grid; gap: 2.5rem; margin-top: 2rem; }
+@media (min-width: 56rem) {
+  .bus { display: block; height: 2.6rem; position: relative; }
+  .bus::before { content: ""; position: absolute; left: 50%; top: 0; height: 1.3rem; border-left: 2px solid var(--line); }
+  .bus::after { content: ""; position: absolute; left: calc(100% / 6); right: calc(100% / 6); top: 1.3rem; height: 1.3rem; border: 2px solid var(--line); border-bottom: 0; border-radius: 10px 10px 0 0; }
+  .three { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(1.25rem, 2.5vw, 2rem); margin-top: 0; }
+}
+.col { min-width: 0; display: flex; flex-direction: column; gap: .75rem; }
+.col .view { order: -1; }
+.who { margin: .5rem 0 0; font-size: 1rem; font-weight: 700; color: var(--brand); letter-spacing: .04em; }
+.col h3 { font-size: 1.3125rem; line-height: 1.45; margin: 0; }
+.col p { margin: 0; color: var(--muted); }
+.view {
+  position: relative; margin: 0; aspect-ratio: 16 / 9; overflow: hidden;
+  border-radius: 10px; border: 1px solid var(--line); background: var(--ground-alt);
+}
+.view img { width: 100%; height: 100%; object-fit: cover; object-position: 50% 0; }
+.col.center .view { box-shadow: var(--shadow); outline: 2px solid var(--brand); outline-offset: 4px; }
+
+/* 教育者: the same lesson as slide → book → 暗記 (Egatari Viewer), a slow crossfade.
+   The slide is always underneath; the book and the 暗記 view fade in over it
+   (about 4 s each, 12 s a cycle). With reduced motion only the slide is shown. */
+.fade > * { position: absolute; inset: 0; }
+.fade > :first-child { position: relative; }
+.fade-tag {
+  position: absolute; left: .5rem; bottom: .5rem;
+  font-size: .875rem; font-weight: 700; line-height: 1.4; padding: .15rem .55rem; border-radius: 4px;
+  background: var(--brand); color: var(--on-brand);
+}
+.fade .f2, .fade .f3 { opacity: 0; }
+@media (prefers-reduced-motion: no-preference) {
+  .fade .f2 { animation: fade-book 12s linear infinite; }
+  .fade .f3 { animation: fade-recall 12s linear infinite; }
+}
+@media (prefers-reduced-motion: reduce) { .fade .f2, .fade .f3 { display: none; } }
+@keyframes fade-recall { 0%, 63.5% { opacity: 0; } 71.5%, 92% { opacity: 1; } 100% { opacity: 0; } }
+/* the book layer stays opaque under 暗記 and drops out with it at the end of the cycle */
+@keyframes fade-book { 0%, 30% { opacity: 0; } 38%, 92% { opacity: 1; } 100% { opacity: 0; } }
+
+/* 技術者: the source and the two commands, on a dark screen in both themes */
+.view.code {
+  background: #1E1E2C; color: #E8E8F0; border-color: var(--screen-edge);
+  font-family: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  font-size: clamp(.625rem, .9vw, .75rem); line-height: 1.55; aspect-ratio: auto;
+  padding: .8rem 1rem; white-space: pre; overflow-x: auto; overflow-wrap: normal;
+}
+.code .d { color: #9A9BB0; }
+.code .p { color: #A9ABFA; }
+.code .ok { color: #6FCF97; }
+@media (max-width: 30rem) { .view.code { font-size: .625rem; padding: .7rem .8rem; } }
+
+/* how a file is made: text beside the quality check screenshot */
+.split { display: grid; gap: clamp(2rem, 4vw, 3.5rem); align-items: center; }
+@media (min-width: 64rem) { .split { grid-template-columns: minmax(0, 1fr) minmax(0, 1.4fr); } }
+.stat { display: flex; gap: 2rem; flex-wrap: wrap; margin: 1.5rem 0 0; }
+.stat div { font-variant-numeric: tabular-nums; }
+.stat b { display: block; font-size: 2.5rem; color: var(--brand); line-height: 1.2; }
+.stat span { font-size: 1rem; color: var(--muted); }
+.learners { margin-top: 1.5rem; background: var(--ground); border: 1px solid var(--line); border-left: 4px solid var(--brand); border-radius: 10px; padding: 1.1rem 1.25rem 1.25rem; }
+.learners h3 { font-size: 1.1875rem; margin: 0 0 .5rem; line-height: 1.5; }
+.learners p { margin: 0 0 .75rem; }
+.learners .links { margin-top: .5rem; }

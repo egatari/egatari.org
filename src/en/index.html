@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Egatari: Visuals narrate. You pass it on.</title>
-<meta name="description" content="Egatari, a format for lessons that puts slides, script, audio and a book into one HTML file.">
+<meta name="description" content="Egatari is a format that bundles slides, script, audio and a book into a single HTML file. It plays in any browser, and generative AI can write and edit it.">
 <meta name="color-scheme" content="light dark">
 <link rel="alternate" hreflang="ja" href="https://egatari.org/">
 <link rel="alternate" hreflang="en" href="https://egatari.org/en/">
@@ -28,72 +28,74 @@
         <a href="/" lang="ja" hreflang="ja">日本語</a>
       </nav>
     </div>
-    <div class="hero-grid">
-      <div>
-        <h1 class="headline"><span>Visuals narrate.</span><span class="accent">You pass it on.</span></h1>
-        <p class="lead">One file for everyone with something to tell.</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="https://studio.egatari.org/?lang=en">Open the editor</a>
-          <a class="btn btn-secondary" href="/gallery/" hreflang="ja">See the samples</a>
-        </div>
+    <div class="top-hero">
+      <p class="eyebrow">Egatari (picture-telling)</p>
+      <h1 class="headline">One file for everyone with something to tell.</h1>
+      <p class="lead">Egatari is a format that bundles slides, script, audio and a book into a single HTML file. It plays in any browser, and generative AI can write and edit it.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://studio.egatari.org/?lang=en">Open the editor</a>
+        <a class="btn btn-secondary" href="/gallery/" hreflang="ja">See the samples</a>
       </div>
-      <!-- HERO SLOT: see src/index.html. For now a still of a real lesson
-           (egatari-intro-en, first slide, from samples-v0.6.9); do not embed
-           .ega.html here. -->
-      <figure class="hero-visual">
-        <img src="/en/hero-egatari-intro-en.webp" width="1280" height="720"
-             alt="Cover of the sample “Introducing Egatari”. The heading reads “Visuals narrate. You pass it on.”">
-      </figure>
     </div>
   </div>
 </header>
 
 <main id="main">
-  <section class="sec" aria-labelledby="s01">
-    <div class="wrap sec-grid sec-media">
-      <div class="sec-text">
-        <p class="num" aria-hidden="true">01</p>
-        <div class="sec-body">
-          <h2 id="s01">Everything in one file</h2>
-          <p>Slides, script, audio and a book go into one HTML file (.ega.html). Open it in a browser and it plays; open it in the editor (Egatari Studio) and you can change it. Send it by email, put it on your school's server, or upload it to an LMS (SCORM): it is the same single file every time.</p>
-        </div>
+  <section class="tree" aria-label="One file, seen three ways">
+    <div class="wrap">
+      <p class="file"><span>moon-phases.ega.html</span></p>
+      <div class="bus" aria-hidden="true"></div>
+      <div class="three">
+        <article class="col">
+          <p class="who">For educators</p>
+          <h3>A lesson format with a script and audio</h3>
+          <p>Steps appear in order, with the script spoken aloud and shown as captions. You can also add it to an LMS (SCORM). Learners who open it in Egatari Viewer can read it as a book, highlight passages, and hide them to test their recall. Highlights are stored only on the learner’s device.</p>
+          <figure class="view fade">
+            <img class="f1" src="/assets/top/en/lesson-slide.webp" width="960" height="540" loading="lazy" decoding="async"
+                 alt="The slide “Figures build in the order you speak” from the sample “Introducing Egatari”: figures for sales, members and monthly churn, and a bar chart of sales by quarter.">
+            <img class="f2" src="/assets/top/en/lesson-book.webp" width="960" height="540" loading="lazy" decoding="async"
+                 alt="The same passage shown as a book: the heading “1.2 Figures build in the order you speak” and its text.">
+            <div class="f3">
+              <img src="/assets/top/en/lesson-recall.webp" width="960" height="540" loading="lazy" decoding="async"
+                   alt="The same book open in Egatari Viewer with Recall on: three highlighted phrases are hidden under blocks of yellow, pink and blue.">
+              <span class="fade-tag">Egatari Viewer</span>
+            </div>
+          </figure>
+        </article>
+        <article class="col center">
+          <p class="who">For creators</p>
+          <h3>HTML with presentation features</h3>
+          <p>Use everything HTML can express. Figures move step by step, and you can export the result as a video. You can link between places in the file, and it can also be read as a book.</p>
+          <figure class="view">
+            <img src="/assets/top/moon-slide.webp" width="960" height="540" loading="lazy" decoding="async"
+                 alt="A slide from the Japanese sample “Phases of the Moon”: the Earth and the Moon seen from above the North Pole. Only the thin part where the Moon’s lit half and the half facing the Earth overlap is seen from the Earth, as a crescent lit on the right.">
+          </figure>
+        </article>
+        <article class="col">
+          <p class="who">For engineers</p>
+          <h3>A compiler for slides</h3>
+          <p>The quality check inspects the source, and the build turns it into one file with the player inside. Parts are pinned by version and hash.</p>
+          <pre class="view code" role="img" aria-label="The source of a slide, and the commands for the quality check and the build"><span class="d">&lt;!-- moon-phases/deck.html --&gt;</span>
+&lt;section class="slide"&gt;
+  &lt;h2&gt;見える形は、2 つの半分の重なり&lt;/h2&gt;
+  &lt;svg viewBox="0 0 1180 420"&gt;…&lt;/svg&gt;
+&lt;/section&gt;
+
+<span class="p">$</span> npx egatari check moon-phases/deck.html
+  <span class="ok">0 errors, 0 warnings</span>
+<span class="p">$</span> npx egatari build moon-phases/deck.html \
+    --portable
+  <span class="d">→</span> 月の満ち欠け.ega.html</pre>
+        </article>
       </div>
-      <figure class="shot">
-        <img src="/assets/sections/en/01.webp" width="1400" height="902" loading="lazy" decoding="async"
-             alt="The editor with the sample “Introducing Egatari” open. On the left, the slide “Figures build in the order you speak” (figures for sales, members and monthly churn, and a bar chart of sales by quarter); on the right, the Script panel for the same step.">
-        <figcaption>The editor: a slide, and the script for that step</figcaption>
-      </figure>
     </div>
   </section>
 
-  <section class="sec" aria-labelledby="s02">
-    <div class="wrap sec-grid sec-media flip wide">
-      <div class="sec-text">
-        <p class="num" aria-hidden="true">02</p>
-        <div class="sec-body">
-          <h2 id="s02">Show it in the order you speak</h2>
-          <p>Figures and equations appear one at a time, in the order you explain them (steps). Add a script and you get spoken audio and captions, and you can export the lesson as a video.</p>
-        </div>
-      </div>
-      <figure class="shot">
-        <picture>
-          <source media="(max-width: 40rem)" srcset="/assets/sections/en/02-stack.webp" width="800" height="1382">
-          <img src="/assets/sections/en/02.webp" width="2432" height="450" loading="lazy" decoding="async"
-               alt="Three frames of the same slide, “Prior, evidence, posterior” from the sample “Bayes’ theorem”, at steps 1, 2 and 3. Step 1 shows only the Prior box. Step 2 adds an arrow and the Evidence box, and step 3 the Posterior box, in red. Each frame shows the script of its step as a caption.">
-        </picture>
-        <figcaption>The same slide at steps 1, 2 and 3 (with captions)</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section class="sec" aria-labelledby="s03">
-    <div class="wrap sec-grid sec-media">
-      <div class="sec-text">
-        <p class="num" aria-hidden="true">03</p>
-        <div class="sec-body">
-          <h2 id="s03">An AI drafts; the quality check finds what to fix</h2>
-          <p>Tell a chat AI your topic and it drafts the lesson. The quality check looks for text that overflows, text that is too small, color contrast and the alt text of images, and even writes the fix request for you.</p>
-        </div>
+  <section class="sec" aria-labelledby="s-ai">
+    <div class="wrap split">
+      <div class="sec-body">
+        <h2 id="s-ai">Write it with generative AI, fix it with the quality check</h2>
+        <p>Tell an AI chatbot (ChatGPT, Gemini, Claude and others) your topic, and it writes the source of an Egatari file. The quality check looks for text that overflows, text that is too small, color contrast and the alt text of images, and writes the fix request for the AI.</p>
       </div>
       <figure class="shot">
         <img src="/assets/sections/en/03.webp" width="1400" height="902" loading="lazy" decoding="async"
@@ -103,59 +105,21 @@
     </div>
   </section>
 
-  <section class="sec" aria-labelledby="s04">
-    <div class="wrap sec-grid sec-media flip phone">
-      <div class="sec-text">
-        <p class="num" aria-hidden="true">04</p>
-        <div class="sec-body">
-          <h2 id="s04">Learners read it again, on their own device</h2>
-          <p>Learners can go back over a lesson at their own pace, on a phone or tablet. They can read it as a book, highlight passages, and hide the highlighted words to test their recall. Highlights stay on that device only; they are not saved in the file or sent anywhere.</p>
-          <ul class="links">
-            <li><a href="https://viewer.egatari.org/">Open Egatari Viewer</a></li>
-          </ul>
-        </div>
-      </div>
-      <figure class="shot">
-        <img src="/assets/sections/en/04.webp" width="984" height="1039" loading="lazy" decoding="async"
-             alt="Two phone screens of Egatari Viewer side by side, with the book of the sample “Introducing Egatari” open. On the left, three passages are highlighted in yellow, blue and pink. On the right, Recall is on, and the highlighted words are hidden under bands of the same colors.">
-        <figcaption>Egatari Viewer: highlights (left) and Recall (right)</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section class="sec" aria-labelledby="s05">
-    <div class="wrap sec-grid">
-      <p class="num" aria-hidden="true">05</p>
+  <section class="sec" aria-labelledby="s-parts">
+    <div class="wrap">
       <div class="sec-body">
-        <h2 id="s05">Education, business, everyday life</h2>
-        <p>The samples page is in Japanese; some of the samples are in English.</p>
-        <ul class="areas">
-          <li class="area"><a href="/gallery/#teaching" hreflang="ja">
-            <img src="/gallery/covers/bayes.webp" width="640" height="360" alt="A slide from the sample “Bayes’ theorem”: bars showing the chance that a mail is spam rising from 20% to 50% to 95%, one word at a time" loading="lazy">
-            <span class="area-name">Education</span>
-            <span class="area-desc">Classes, lectures, staff training</span>
-          </a></li>
-          <li class="area"><a href="/gallery/#business" hreflang="ja">
-            <img src="/gallery/covers/quarterly-report.webp" width="640" height="360" alt="A slide from a sample in Japanese, a quarterly results report: three figures, for sales, operating profit and new customers" loading="lazy">
-            <span class="area-name">Business</span>
-            <span class="area-desc">Reports, proposals, company training</span>
-          </a></li>
-          <li class="area"><a href="/gallery/#life" hreflang="ja">
-            <img src="/gallery/covers/city-budget-en.webp" width="640" height="360" alt="A slide from the sample “City A budget 2027”: a donut chart of what the money is for, in which welfare is the largest share" loading="lazy">
-            <span class="area-name">Everyday life</span>
-            <span class="area-desc">Notices, guides, public awareness</span>
-          </a></li>
-        </ul>
+        <h2 id="s-parts">More parts, more ways to express</h2>
+        <p>New figures and animations are added to the parts library as parts. What one person made with generative AI, the next person can use as it is. Egatari’s first parts, too, came from the slides of a class.</p>
+        <div class="stat"><div><b>55</b><span>parts (parts library 2.15.0)</span></div></div>
       </div>
     </div>
   </section>
 
-  <section class="sec" aria-labelledby="s06">
-    <div class="wrap sec-grid">
-      <p class="num" aria-hidden="true">06</p>
+  <section class="sec" aria-labelledby="s-open">
+    <div class="wrap">
       <div class="sec-body">
-        <h2 id="s06">An open format</h2>
-        <p>Egatari is a file format that is not tied to any one app. Anyone can read the specification (CC BY 4.0), and lessons can be made with any tool.</p>
+        <h2 id="s-open">An open format</h2>
+        <p>Egatari is a file format that is not tied to any one app. Anyone can read the specification (CC BY 4.0), and Egatari files can be made with any tool.</p>
         <ul class="links">
           <li><a href="/spec/">Specification (Egatari 1.0)</a></li>
           <li><a href="https://github.com/egatari">GitHub</a></li>
@@ -164,19 +128,18 @@
     </div>
   </section>
 
-  <section class="sec" aria-labelledby="s07">
-    <div class="wrap sec-grid">
-      <p class="num" aria-hidden="true">07</p>
+  <section class="sec" aria-labelledby="s-use">
+    <div class="wrap">
       <div class="sec-body">
-        <h2 id="s07">Get started</h2>
+        <h2 id="s-use">How to use it</h2>
         <ol class="routes">
           <li>
             <h3>The editor (nothing to install)</h3>
-            <p>Open <a href="https://studio.egatari.org/?lang=en">studio.egatari.org</a> in Chrome or Edge and make your lesson right there.</p>
+            <p>Open <a href="https://studio.egatari.org/?lang=en">studio.egatari.org</a> in Chrome or Edge and make your file right there.</p>
           </li>
           <li>
-            <h3>With a chat AI</h3>
-            <p>Install <a href="https://github.com/egatari/egatari-studio#get-started">the skill for Claude or Codex</a> and you can make Egatari files.</p>
+            <h3>Generative AI</h3>
+            <p>Add <a href="https://github.com/egatari/egatari-studio#get-started">the Egatari skills</a> to an AI chatbot or to an AI agent (Claude Code, Codex), and it can make Egatari files.</p>
           </li>
           <li>
             <h3>Command line</h3>
@@ -184,6 +147,13 @@
 npx egatari dev mytalk/deck.html</code></pre>
           </li>
         </ol>
+        <div class="learners">
+          <h3>Learners use Egatari Viewer</h3>
+          <p>Open an Egatari file at viewer.egatari.org. Add it to the home screen and it opens without a network connection. Highlights and recently opened files are stored only on the learner’s device.</p>
+          <ul class="links">
+            <li><a href="https://viewer.egatari.org/">Open Egatari Viewer</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>

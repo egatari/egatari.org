@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Egatari：絵が語り、人へ伝える。</title>
-<meta name="description" content="スライド・台本・音声・本を、1 つの HTML ファイルにまとめる教材の形式 Egatari。">
+<meta name="description" content="Egatari は、スライド・台本・音声・本を 1 つの HTML ファイルにまとめる形式です。ブラウザで再生でき、生成 AI で作成・修正できます。">
 <meta name="color-scheme" content="light dark">
 <link rel="alternate" hreflang="ja" href="https://egatari.org/">
 <link rel="alternate" hreflang="en" href="https://egatari.org/en/">
@@ -46,73 +46,74 @@
         <a href="/en/" lang="en" hreflang="en">English</a>
       </nav>
     </div>
-    <div class="hero-grid">
-      <div>
-        <h1 class="headline"><span>絵が語り、</span><span class="accent">人へ伝える。</span></h1>
-        <p class="lead">伝える人すべてのための、1 つのファイル。</p>
-        <div class="actions">
-          <a class="btn btn-primary" href="https://studio.egatari.org/">編集アプリを開く</a>
-          <a class="btn btn-secondary" href="/gallery/">サンプルを見る</a>
-        </div>
+    <div class="top-hero">
+      <p class="eyebrow">Egatari（絵語り）</p>
+      <h1 class="headline">伝える人すべてのための、1 つのファイル。</h1>
+      <p class="lead">Egatari は、スライド・台本・音声・本を 1 つの HTML ファイルにまとめる形式です。ブラウザで再生でき、生成 AI で作成・修正できます。</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="https://studio.egatari.org/">編集アプリを開く</a>
+        <a class="btn btn-secondary" href="/gallery/">サンプルを見る</a>
       </div>
-      <!-- HERO SLOT: for now a still of a real lesson (egatari-intro, first slide,
-           from samples-v0.6.9). Later this becomes a lesson that plays with its
-           script, served from viewer.egatari.org (spec §10.1 needs a sandboxing
-           CSP header that this host cannot send), so do not embed .ega.html here. -->
-      <figure class="hero-visual">
-        <img src="/assets/hero-egatari-intro.webp" width="1280" height="720"
-             alt="サンプル「Egatari の紹介」の表紙。見出しは「絵が語り、人へ伝える」。">
-      </figure>
     </div>
   </div>
 </header>
 
 <main id="main">
-  <section class="sec" aria-labelledby="s01">
-    <div class="wrap sec-grid sec-media">
-      <div class="sec-text">
-        <p class="num" aria-hidden="true">01</p>
-        <div class="sec-body">
-          <h2 id="s01">1 つのファイルに、全部入る</h2>
-          <p>スライド・台本・音声・本を、1 つの HTML ファイル（.ega.html）にまとめます。ブラウザで開けばそのまま再生でき、編集アプリ（Egatari Studio）で開けば直せます。メールで送る、校内のサーバーに置く、LMS に載せる（SCORM）。どれも、そのファイル 1 つです。</p>
-        </div>
+  <section class="tree" aria-label="同じ 1 つのファイルの、3 つの見え方">
+    <div class="wrap">
+      <p class="file"><span>moon-phases.ega.html</span></p>
+      <div class="bus" aria-hidden="true"></div>
+      <div class="three">
+        <article class="col">
+          <p class="who">教育者へ</p>
+          <h3>台本と音声を備えた教材の形式</h3>
+          <p>ステップで順に表示し、台本の音声と字幕が付きます。LMS（SCORM）にも登録できます。学習者は Egatari Viewer で開くと、本の形で読み、ハイライトを引き、暗記のために隠せます。ハイライトは学習者の端末の中だけに保存されます。</p>
+          <figure class="view fade">
+            <img class="f1" src="/assets/top/lesson-slide.webp" width="960" height="540" loading="lazy" decoding="async"
+                 alt="サンプル「Egatari の紹介」のスライド「話す順に、図が組み上がる」。売上・会員数・解約率の数字と、四半期ごとの売上の棒グラフ。">
+            <img class="f2" src="/assets/top/lesson-book.webp" width="960" height="540" loading="lazy" decoding="async"
+                 alt="同じ箇所を本の形で表示したところ。見出し「1.2 話す順に、図が組み上がる」と本文。">
+            <div class="f3">
+              <img src="/assets/top/lesson-recall.webp" width="960" height="540" loading="lazy" decoding="async"
+                   alt="Egatari Viewer で同じ本を開き、暗記をオンにしたところ。ハイライトした 3 か所の文字が、黄・桃・青の色で隠れている。">
+              <span class="fade-tag">Egatari Viewer</span>
+            </div>
+          </figure>
+        </article>
+        <article class="col center">
+          <p class="who">表現者へ</p>
+          <h3>発表の機能を備えた HTML</h3>
+          <p>HTML の表現をそのまま使用できます。図はステップで動き、動画にも書き出せます。ファイルの中にリンクを作成でき、本の形にもなります。</p>
+          <figure class="view">
+            <img src="/assets/top/moon-slide.webp" width="960" height="540" loading="lazy" decoding="async"
+                 alt="サンプル「月の満ち欠け」のスライド「見える形は、2 つの半分の重なり」。北極の上から見た地球と月。月の光っている半分と、地球から見える半分が重なる細い部分が、右側が光る三日月として見える。">
+          </figure>
+        </article>
+        <article class="col">
+          <p class="who">技術者へ</p>
+          <h3>スライドのコンパイラ</h3>
+          <p>原稿を品質チェックで検査し、プレーヤーを同梱した 1 つのファイルにビルドします。パーツはバージョンとハッシュで固定します。</p>
+          <pre class="view code" role="img" aria-label="スライドの原稿と、品質チェックとビルドのコマンド"><span class="d">&lt;!-- moon-phases/deck.html --&gt;</span>
+&lt;section class="slide"&gt;
+  &lt;h2&gt;見える形は、2 つの半分の重なり&lt;/h2&gt;
+  &lt;svg viewBox="0 0 1180 420"&gt;…&lt;/svg&gt;
+&lt;/section&gt;
+
+<span class="p">$</span> npx egatari check moon-phases/deck.html
+  <span class="ok">エラー 0　警告 0</span>
+<span class="p">$</span> npx egatari build moon-phases/deck.html \
+    --portable
+  <span class="d">→</span> 月の満ち欠け.ega.html</pre>
+        </article>
       </div>
-      <figure class="shot">
-        <img src="/assets/sections/01.webp" width="1400" height="902" loading="lazy" decoding="async"
-             alt="編集アプリでサンプル「Egatari の紹介」を開いた画面。左にスライド「話す順に、図が組み上がる」（売上・会員数・解約率の数字と、四半期ごとの売上の棒グラフ）、右に同じステップの台本の欄が並んでいる。">
-        <figcaption>編集アプリ：スライドと、そのステップの台本</figcaption>
-      </figure>
     </div>
   </section>
 
-  <section class="sec" aria-labelledby="s02">
-    <div class="wrap sec-grid sec-media flip wide">
-      <div class="sec-text">
-        <p class="num" aria-hidden="true">02</p>
-        <div class="sec-body">
-          <h2 id="s02">話す順に、見せる</h2>
-          <p>説明する順に、図や式を 1 つずつ出します（ステップ）。台本を付ければ、読み上げの音声と字幕が付き、動画にも書き出せます。</p>
-        </div>
-      </div>
-      <figure class="shot">
-        <picture>
-          <source media="(max-width: 40rem)" srcset="/assets/sections/02-stack.webp" width="800" height="1382">
-          <img src="/assets/sections/02.webp" width="2432" height="450" loading="lazy" decoding="async"
-               alt="サンプル「月の満ち欠け」の同じスライドを、ステップ 0・1・2 の順に 3 枚並べたもの。ステップ 0 は地球と月だけ。1 で太陽の光と、月の光っている半分が加わり、2 で地球から見える半分と、見る向きの点線が加わる。どの画面にも、そのステップの台本が字幕で出ている。">
-        </picture>
-        <figcaption>同じスライドの、ステップ 0・1・2（字幕つき）</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section class="sec" aria-labelledby="s03">
-    <div class="wrap sec-grid sec-media">
-      <div class="sec-text">
-        <p class="num" aria-hidden="true">03</p>
-        <div class="sec-body">
-          <h2 id="s03">AI が書き、品質チェックが直す</h2>
-          <p>チャットの AI に題材を伝えると、教材の原稿ができます。品質チェックが、文字のはみ出し・小さすぎる字・色のコントラスト・画像の代替テキストを調べ、直す依頼の文まで作ります。</p>
-        </div>
+  <section class="sec" aria-labelledby="s-ai">
+    <div class="wrap split">
+      <div class="sec-body">
+        <h2 id="s-ai">生成 AI で作成し、品質チェックで修正する</h2>
+        <p>対話型の生成 AI（ChatGPT・Gemini・Claude など）に題材を伝えると、Egatari ファイルの原稿を作成します。品質チェックが文字のはみ出し・小さすぎる文字・色のコントラスト・画像の代替テキストを検査し、AI への修正依頼の文を作成します。</p>
       </div>
       <figure class="shot">
         <img src="/assets/sections/03.webp" width="1400" height="902" loading="lazy" decoding="async"
@@ -122,58 +123,21 @@
     </div>
   </section>
 
-  <section class="sec" aria-labelledby="s04">
-    <div class="wrap sec-grid sec-media flip phone">
-      <div class="sec-text">
-        <p class="num" aria-hidden="true">04</p>
-        <div class="sec-body">
-          <h2 id="s04">学習者が自分の端末で、読み返す</h2>
-          <p>学習者はスマートフォンやタブレットで、自分のペースで読み返せます。本の形で読む、ハイライトを引く、暗記のために隠す。引いたハイライトはその端末の中だけに残り、ファイルにも、どこにも送られません。</p>
-          <ul class="links">
-            <li><a href="https://viewer.egatari.org/">Egatari Viewer を開く</a></li>
-          </ul>
-        </div>
-      </div>
-      <figure class="shot">
-        <img src="/assets/sections/04.webp" width="984" height="1039" loading="lazy" decoding="async"
-             alt="スマートフォンの Egatari Viewer で、サンプル「生成AIの利活用ガイドラインを読む」の本を開いた画面を 2 つ並べたもの。左は本文の 3 か所に黄・青・桃のハイライトを引いたところ。右は暗記をオンにして、ハイライトした語を同じ色の帯で隠したところ。">
-        <figcaption>Egatari Viewer：ハイライト（左）と暗記（右）</figcaption>
-      </figure>
-    </div>
-  </section>
-
-  <section class="sec" aria-labelledby="s05">
-    <div class="wrap sec-grid">
-      <p class="num" aria-hidden="true">05</p>
+  <section class="sec" aria-labelledby="s-parts">
+    <div class="wrap">
       <div class="sec-body">
-        <h2 id="s05">教育・ビジネス・生活</h2>
-        <ul class="areas">
-          <li class="area"><a href="/gallery/#teaching">
-            <img src="/gallery/covers/moon-phases.webp" width="640" height="360" alt="サンプル「月の満ち欠け」の表紙" loading="lazy">
-            <span class="area-name">教育</span>
-            <span class="area-desc">授業・講義・校内研修</span>
-          </a></li>
-          <li class="area"><a href="/gallery/#business">
-            <img src="/gallery/covers/quarterly-report.webp" width="640" height="360" alt="サンプル「第 3 四半期 業績報告」の表紙" loading="lazy">
-            <span class="area-name">ビジネス</span>
-            <span class="area-desc">報告・提案・社内研修</span>
-          </a></li>
-          <li class="area"><a href="/gallery/#life">
-            <img src="/gallery/covers/hazard-map.webp" width="640" height="360" alt="サンプル「大雨のとき、どこへ逃げる？」の表紙" loading="lazy">
-            <span class="area-name">生活</span>
-            <span class="area-desc">お知らせ・手引き・啓発</span>
-          </a></li>
-        </ul>
+        <h2 id="s-parts">パーツが増え、表現の幅が広がる</h2>
+        <p>新しい図や動きは、パーツとしてパーツライブラリに取り込まれます。誰かが生成 AI で作成した表現を、次の人がそのまま使用できます。Egatari の最初のパーツも、授業のスライドから取り込んだものです。</p>
+        <div class="stat"><div><b>55</b><span>パーツ（パーツライブラリ 2.15.0）</span></div></div>
       </div>
     </div>
   </section>
 
-  <section class="sec" aria-labelledby="s06">
-    <div class="wrap sec-grid">
-      <p class="num" aria-hidden="true">06</p>
+  <section class="sec" aria-labelledby="s-open">
+    <div class="wrap">
       <div class="sec-body">
-        <h2 id="s06">開かれた形式</h2>
-        <p>Egatari は、特定のアプリに縛られないファイル形式です。仕様は誰でも読めて（CC BY 4.0）、どのツールからでも作れます。</p>
+        <h2 id="s-open">開かれた形式</h2>
+        <p>Egatari は、特定のアプリに縛られないファイル形式です。仕様は誰でも読めて（CC BY 4.0）、どのツールからでも作成できます。</p>
         <ul class="links">
           <li><a href="/spec/">仕様（Egatari 1.0）</a></li>
           <li><a href="https://github.com/egatari">GitHub</a></li>
@@ -182,19 +146,18 @@
     </div>
   </section>
 
-  <section class="sec" aria-labelledby="s07">
-    <div class="wrap sec-grid">
-      <p class="num" aria-hidden="true">07</p>
+  <section class="sec" aria-labelledby="s-use">
+    <div class="wrap">
       <div class="sec-body">
-        <h2 id="s07">始め方</h2>
+        <h2 id="s-use">利用方法</h2>
         <ol class="routes">
           <li>
             <h3>編集アプリ（インストール不要）</h3>
-            <p>Chrome か Edge で <a href="https://studio.egatari.org/">studio.egatari.org</a> を開き、その場で作ります。</p>
+            <p>Chrome か Edge で <a href="https://studio.egatari.org/">studio.egatari.org</a> を開き、その場で作成します。</p>
           </li>
           <li>
-            <h3>チャットの AI と</h3>
-            <p><a href="https://github.com/egatari/egatari-studio#get-started">Claude・Codex 用のスキル</a>を入れると、Egatari ファイルを作れます。</p>
+            <h3>生成 AI</h3>
+            <p>対話型 AI や AI エージェント（Claude Code・Codex）に <a href="https://github.com/egatari/egatari-studio#get-started">Egatari のスキル</a>を追加すると、Egatari ファイルを作成できます。</p>
           </li>
           <li>
             <h3>コマンドライン</h3>
@@ -202,6 +165,13 @@
 npx egatari dev mytalk/deck.html</code></pre>
           </li>
         </ol>
+        <div class="learners">
+          <h3>学習者は Egatari Viewer で</h3>
+          <p>viewer.egatari.org で Egatari ファイルを開きます。ホーム画面に追加すると、ネットワークがなくても開けます。ハイライトと最近開いたファイルは、学習者の端末の中だけに保存されます。</p>
+          <ul class="links">
+            <li><a href="https://viewer.egatari.org/">Egatari Viewer を開く</a></li>
+          </ul>
+        </div>
       </div>
     </div>
   </section>
