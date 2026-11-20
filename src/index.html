@@ -85,8 +85,12 @@
           <h3>発表の機能を備えた HTML</h3>
           <p>HTML の表現をそのまま使用できます。図はステップで動き、動画にも書き出せます。ファイルの中にリンクを作成でき、本の形にもなります。</p>
           <figure class="view">
-            <img src="/assets/top/moon-slide.webp" width="960" height="540" loading="lazy" decoding="async"
-                 alt="サンプル「月の満ち欠け」のスライド「見える形は、2 つの半分の重なり」。北極の上から見た地球と月。月の光っている半分と、地球から見える半分が重なる細い部分が、右側が光る三日月として見える。">
+            <video data-motion autoplay muted loop playsinline preload="metadata" width="960" height="540"
+                   poster="/assets/top/moon-slide.webp"
+                   aria-label="サンプル「月の満ち欠け」のスライド「見える形は、2 つの半分の重なり」がステップごとに組み上がる動画（音声なし）。北極の上から見た地球と月に、太陽の光と光っている半分、地球から見える半分、2 つが重なる細い部分と右側が光る三日月が順に加わり、最後に結論の行が出る。">
+              <source src="/assets/top/moon-steps.webm" type="video/webm">
+              <source src="/assets/top/moon-steps.mp4" type="video/mp4">
+            </video>
           </figure>
         </article>
         <article class="col">
@@ -197,5 +201,21 @@ npx egatari dev mytalk/deck.html</code></pre>
     </ul>
   </div>
 </footer>
+<script>
+/* The creator column's clip: with reduced motion, show the poster only (no autoplay, no download). */
+(function () {
+  var mq = window.matchMedia ? matchMedia('(prefers-reduced-motion: reduce)') : null;
+  var vids = document.querySelectorAll('video[data-motion]');
+  function apply() {
+    for (var i = 0; i < vids.length; i++) {
+      var v = vids[i];
+      if (mq && mq.matches) { v.removeAttribute('autoplay'); v.preload = 'none'; v.pause(); }
+      else if (v.paused) { v.preload = 'auto'; var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+    }
+  }
+  apply();
+  if (mq && mq.addEventListener) mq.addEventListener('change', apply);
+})();
+</script>
 </body>
 </html>

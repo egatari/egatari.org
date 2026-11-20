@@ -67,8 +67,12 @@
           <h3>HTML with presentation features</h3>
           <p>Use everything HTML can express. Figures move step by step, and you can export the result as a video. You can link between places in the file, and it can also be read as a book.</p>
           <figure class="view">
-            <img src="/assets/top/en/creator-slide.webp" width="960" height="540" loading="lazy" decoding="async"
-                 alt="The slide “Anywhere there is a browser” from the same file: six cards, Any device, Offline too, Just send it, As a video, Live, and Open and edit, above the line “Hand over one HTML file, and it plays”.">
+            <video data-motion autoplay muted loop playsinline preload="metadata" width="960" height="540"
+                   poster="/assets/top/en/creator-slide.webp"
+                   aria-label="A silent clip of the slide “Anywhere there is a browser” from the same file building up step by step: six cards appear one at a time, Any device, Offline too, Just send it, As a video, Live, and Open and edit, then the line “Hand over one HTML file, and it plays”.">
+              <source src="/assets/top/en/creator-steps.webm" type="video/webm">
+              <source src="/assets/top/en/creator-steps.mp4" type="video/mp4">
+            </video>
           </figure>
         </article>
         <article class="col">
@@ -179,5 +183,21 @@ npx egatari dev mytalk/deck.html</code></pre>
     </ul>
   </div>
 </footer>
+<script>
+/* The creator column's clip: with reduced motion, show the poster only (no autoplay, no download). */
+(function () {
+  var mq = window.matchMedia ? matchMedia('(prefers-reduced-motion: reduce)') : null;
+  var vids = document.querySelectorAll('video[data-motion]');
+  function apply() {
+    for (var i = 0; i < vids.length; i++) {
+      var v = vids[i];
+      if (mq && mq.matches) { v.removeAttribute('autoplay'); v.preload = 'none'; v.pause(); }
+      else if (v.paused) { v.preload = 'auto'; var p = v.play(); if (p && p.catch) p.catch(function () {}); }
+    }
+  }
+  apply();
+  if (mq && mq.addEventListener) mq.addEventListener('change', apply);
+})();
+</script>
 </body>
 </html>
