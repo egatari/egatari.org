@@ -1,9 +1,9 @@
 {
-  "studio": "0.6.9",
-  "commit": "f2e67930aef0d26891ab8b908ce025da126f259b",
-  "version": "0.6.9-f2e67930ae",
+  "studio": "0.6.16",
+  "commit": "b7e4f1a3e4f461c4fa3d234546d3f934e2382a6e",
+  "version": "0.6.16-b7e4f1a3e4",
   "sha256": {
-    "site-play.js": "07d9365808b2ae297cbf5a2f6bcece0af9b9644cf66b53abfc5f04ed5ad70130",
+    "site-play.js": "8d8951cdf7e4c5034385b1f08887a7516ec632527956f6762c9526ee7c7a8a5a",
     "site-play.css": "5a0165a9c6ad3883480a425f4038af161ec22f107d90257c9b0278487eb5168b"
   },
   "pageCsp": "default-src 'none'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; img-src 'self' data: blob:; font-src 'self' data:; media-src data: blob:; connect-src 'self'; worker-src 'none'; manifest-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'none'; form-action 'none'"
