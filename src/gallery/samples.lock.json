@@ -52,6 +52,14 @@
       "lang": "ja"
     },
     {
+      "id": "for-loop",
+      "file": "for-loop.play.ega.html",
+      "sha256": "57d134293e42205cb269da7b0d42951a844a1a1065d88ef9ef88262c30567567",
+      "size": 1184960,
+      "title": "for 文で合計と平均を求める",
+      "lang": "ja"
+    },
+    {
       "id": "huffman",
       "file": "huffman.play.ega.html",
       "sha256": "226150d52af202fb95b3b22e6fcb1c809d98ae3d9e6afe488258b7fdec2de828",
@@ -66,6 +74,22 @@
       "size": 1178246,
       "title": "Bayes' theorem",
       "lang": "en"
+    },
+    {
+      "id": "vectors",
+      "file": "vectors.play.ega.html",
+      "sha256": "f35498df9ca0171a534bcd864bf3f129540b306990ae050faa628e4f6c852e53",
+      "size": 1130856,
+      "title": "内積・正射影と 1 次変換",
+      "lang": "ja"
+    },
+    {
+      "id": "classify-cv",
+      "file": "classify-cv.play.ega.html",
+      "sha256": "9f353885cd134a924d0dc54553cc86cb45d29b99fd9a7830a82847883bf7e944",
+      "size": 1275402,
+      "title": "分類の境界と交差検証",
+      "lang": "ja"
     },
     {
       "id": "population",

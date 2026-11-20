@@ -105,6 +105,18 @@
       "subject": "英語"
     },
     {
+      "id": "for-loop",
+      "title": "for 文で合計と平均を求める",
+      "section": "teaching",
+      "lang": "ja",
+      "portable": "for-loop.ega.html",
+      "play": "for-loop.play.ega.html",
+      "cover": "covers/for-loop.webp",
+      "playUrl": "/gallery/play/?id=for-loop",
+      "group": "class",
+      "subject": "情報"
+    },
+    {
       "id": "huffman",
       "title": "ハフマン符号",
       "section": "teaching",
@@ -125,6 +137,28 @@
       "play": "bayes.play.ega.html",
       "cover": "covers/bayes.webp",
       "playUrl": "/gallery/play/?id=bayes",
+      "group": "lecture"
+    },
+    {
+      "id": "vectors",
+      "title": "内積・正射影と 1 次変換",
+      "section": "teaching",
+      "lang": "ja",
+      "portable": "vectors.ega.html",
+      "play": "vectors.play.ega.html",
+      "cover": "covers/vectors.webp",
+      "playUrl": "/gallery/play/?id=vectors",
+      "group": "lecture"
+    },
+    {
+      "id": "classify-cv",
+      "title": "分類の境界と交差検証",
+      "section": "teaching",
+      "lang": "ja",
+      "portable": "classify-cv.ega.html",
+      "play": "classify-cv.play.ega.html",
+      "cover": "covers/classify-cv.webp",
+      "playUrl": "/gallery/play/?id=classify-cv",
       "group": "lecture"
     },
     {
