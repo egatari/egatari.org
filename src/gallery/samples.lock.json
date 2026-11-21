@@ -1,12 +1,12 @@
 {
   "repo": "egatari/examples",
-  "tag": "samples-v0.6.16",
-  "sums": "cd34b84179bec0012ab4738be4ca3fd3e43ae302a2d1accce25218934bbedc54",
+  "tag": "samples-v0.6.17",
+  "sums": "169e5c3aae0e4d6f031a1b377b9a6ac0b77df505db7e189bd26c80725bff3205",
   "lessons": [
     {
       "id": "egatari-intro",
       "file": "egatari-intro.play.ega.html",
-      "sha256": "78d2acdd1110ebfaaf807208c412453484a843f19ffdb4786eb3111ab0ba4e9d",
+      "sha256": "b5d6fcb38de27dae63fd3ff5cd034b769bea0754aacd1b33df5a54ff1876411f",
       "size": 2856311,
       "title": "Egatari の紹介",
       "lang": "ja"
@@ -14,7 +14,7 @@
     {
       "id": "egatari-intro-en",
       "file": "egatari-intro-en.play.ega.html",
-      "sha256": "ee0ed8bfc3827566c6fa8bc664535f215e65e5ada60acd65a380625b9b89a468",
+      "sha256": "1aca7d78ea7f9e72114ae986a46903d08b0e85d6684486a2e6bd8fb95a092312",
       "size": 1127162,
       "title": "Introducing Egatari",
       "lang": "en"
@@ -22,7 +22,7 @@
     {
       "id": "parts-showcase",
       "file": "parts-showcase.play.ega.html",
-      "sha256": "b0cf04c7c66e008d5357bbfb56cde38cbf8077beb6d2ac8fb951e951cd50df8c",
+      "sha256": "2f99cdcc42f158dd586ea3a1601d1b401654e813c8e8ac7908157fc4b957f60d",
       "size": 4091389,
       "title": "パーツ図鑑",
       "lang": "ja"
@@ -30,7 +30,7 @@
     {
       "id": "moon-phases",
       "file": "moon-phases.play.ega.html",
-      "sha256": "cae24a4599b5f64a5d2f79df0471c447ebcfd3c96885625fab385a1a31b5b572",
+      "sha256": "1369f247920a0744447e11bfcd53adb507b5fa8435f7c18115d197fc12d7ecb2",
       "size": 1246451,
       "title": "月の満ち欠け",
       "lang": "ja"
@@ -38,7 +38,7 @@
     {
       "id": "chords",
       "file": "chords.play.ega.html",
-      "sha256": "88b43ca1c181c509de61336a25d87cd6a061e8578660d672ab82c2f5519f1f82",
+      "sha256": "ede204e83b12ffc687a69720e83b69746ba421bfb081a265a310d1ba1b2dba3a",
       "size": 1211412,
       "title": "和音のしくみ",
       "lang": "ja"
@@ -46,7 +46,7 @@
     {
       "id": "sentence-structure",
       "file": "sentence-structure.play.ega.html",
-      "sha256": "87d961d2bdf587ab8cb57677aba04d3946a0f91d72a57e26ae7093fa304c8505",
+      "sha256": "be0161f5e12a1290abfda4ab75c162b90b7122abe8ff42016e61dbcff5150bca",
       "size": 1251199,
       "title": "英文の構造",
       "lang": "ja"
@@ -54,7 +54,7 @@
     {
       "id": "for-loop",
       "file": "for-loop.play.ega.html",
-      "sha256": "57d134293e42205cb269da7b0d42951a844a1a1065d88ef9ef88262c30567567",
+      "sha256": "f5eb022d6f1e06449274c72cab1fcf46980fc7c81ea3b1cb13b6fc4bc2ae48da",
       "size": 1184960,
       "title": "for 文で合計と平均を求める",
       "lang": "ja"
@@ -62,7 +62,7 @@
     {
       "id": "huffman",
       "file": "huffman.play.ega.html",
-      "sha256": "226150d52af202fb95b3b22e6fcb1c809d98ae3d9e6afe488258b7fdec2de828",
+      "sha256": "c024c593c71e3564160e48db5da46a5b4f9475f583e292a34874020c198dcc7f",
       "size": 1718647,
       "title": "ハフマン符号",
       "lang": "ja"
@@ -70,7 +70,7 @@
     {
       "id": "bayes",
       "file": "bayes.play.ega.html",
-      "sha256": "af187cb7678ac75ee6e140f47a645cf7cafd3e67eeab4f4349b70d470c6c1903",
+      "sha256": "cb873692740708187973b7007b0c65e9afeb688b2b8eee560b4388cd71a687c2",
       "size": 1178246,
       "title": "Bayes' theorem",
       "lang": "en"
@@ -78,7 +78,7 @@
     {
       "id": "vectors",
       "file": "vectors.play.ega.html",
-      "sha256": "f35498df9ca0171a534bcd864bf3f129540b306990ae050faa628e4f6c852e53",
+      "sha256": "ce19a8b53de456d26c11389b3802754ad1ea9b5740385a843df1fe9fe0907c65",
       "size": 1130856,
       "title": "内積・正射影と 1 次変換",
       "lang": "ja"
@@ -86,7 +86,7 @@
     {
       "id": "classify-cv",
       "file": "classify-cv.play.ega.html",
-      "sha256": "9f353885cd134a924d0dc54553cc86cb45d29b99fd9a7830a82847883bf7e944",
+      "sha256": "d952615121dbad06a41f78730752a60b9ac4d1b117bdb3d0a196db669675f97e",
       "size": 1275402,
       "title": "分類の境界と交差検証",
       "lang": "ja"
@@ -94,7 +94,7 @@
     {
       "id": "population",
       "file": "population.play.ega.html",
-      "sha256": "32e5b289edcc0f77d6a0ce76fa3e858eb59d38590a9febe1e424a333419dbae7",
+      "sha256": "d468d8d7f6fd030f7d204336144c9c155e3fc1dec0773b56994610ed9134dc2d",
       "size": 1900589,
       "title": "日本の人口の移り変わり",
       "lang": "ja"
@@ -102,7 +102,7 @@
     {
       "id": "live-birthday",
       "file": "live-birthday.play.ega.html",
-      "sha256": "276ea35341cd0208daf8d45de13143a08c4ca2f81520ab9965b62cfab3f795a7",
+      "sha256": "d40213d8d3c6d55b46e2d6e01f0c72b269d958cd8e53db9122435647bcb5ad73",
       "size": 1271607,
       "title": "40 人のクラスに、同じ誕生日の 2 人はいる？",
       "lang": "ja"
@@ -110,7 +110,7 @@
     {
       "id": "genai-guideline",
       "file": "genai-guideline.play.ega.html",
-      "sha256": "f144ee4ff0ee472ff162ffa3c8da921f486f5911dd74066cff6be25527a3a887",
+      "sha256": "06d775ce3e83b51f45c95e5cab9f310e86519fa914234f7ab1aa943212e790bd",
       "size": 1699930,
       "title": "生成AIの利活用ガイドラインを読む",
       "lang": "ja"
@@ -118,7 +118,7 @@
     {
       "id": "quarterly-report",
       "file": "quarterly-report.play.ega.html",
-      "sha256": "9108e1322d7bbc851078319962bff810832b3dc8b1f15bc2b7446243c900dceb",
+      "sha256": "2c870b97f9206a3796ab1dfc4d971229894f69b51a0dd01f6481aea2c108d5a6",
       "size": 1363589,
       "title": "第 3 四半期 業績報告",
       "lang": "ja"
@@ -126,7 +126,7 @@
     {
       "id": "security-training",
       "file": "security-training.play.ega.html",
-      "sha256": "d1647de2c4ae7e806c820684cbdaf781601f8bf97640850a11eb6f94437e4e8d",
+      "sha256": "3126e64a6e29a7cb3123c1417cfca99545aa1a94a93d0f5325e62247935bf26d",
       "size": 1340904,
       "title": "情報セキュリティ研修",
       "lang": "ja"
@@ -134,7 +134,7 @@
     {
       "id": "city-budget-ja",
       "file": "city-budget-ja.play.ega.html",
-      "sha256": "4979555581bf944864a7cd2968c61482cf473fa007c1046e63103e6d3af3b303",
+      "sha256": "bf51ce9bef1e5bdf43c4bb214324d9e4b7e605a1aa3e74c5cfeeaaeb02cd7507",
       "size": 1251153,
       "title": "A 市の予算 2027 年度",
       "lang": "ja"
@@ -142,7 +142,7 @@
     {
       "id": "city-budget-en",
       "file": "city-budget-en.play.ega.html",
-      "sha256": "fefbf8bb1b5c1aa7da840ceec8f95dcf1937741987c11c78409cfb5a9f9f2de1",
+      "sha256": "da466316aaa05035fdcdaa70384438283a5ba7db4d6854772b9ff658268e6270",
       "size": 1134778,
       "title": "City A budget 2027",
       "lang": "en"
@@ -150,7 +150,7 @@
     {
       "id": "hand-hygiene",
       "file": "hand-hygiene.play.ega.html",
-      "sha256": "fb6c75bca14ec2d27e0f5296927e7a8630a957465db77b0ba449ffd195c608dc",
+      "sha256": "5692fc023cd2a2691235c267605cfd2ccbb2febe02b61bcb5a29257f87fee8a8",
       "size": 1309986,
       "title": "手指衛生の 5 つのタイミング",
       "lang": "ja"
@@ -158,7 +158,7 @@
     {
       "id": "hazard-map",
       "file": "hazard-map.play.ega.html",
-      "sha256": "01cb8df547b91ae1a4b9ab989bbd3ea957e937626973a02483a8c3e890710dc5",
+      "sha256": "8a31d7022f05a0644c0f1a91508bf043e2c3b85b569f4ddc2f91566812c11cfb",
       "size": 1338472,
       "title": "大雨のとき、どこへ逃げる？",
       "lang": "ja"
