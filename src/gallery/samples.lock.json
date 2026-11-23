@@ -1,165 +1,197 @@
 {
   "repo": "egatari/examples",
-  "tag": "samples-v0.6.17",
-  "sums": "169e5c3aae0e4d6f031a1b377b9a6ac0b77df505db7e189bd26c80725bff3205",
+  "tag": "samples-v0.6.19",
+  "sums": "cbf0d73e08583ccc95d2854de7b4972e829a6dc47cc85a9af534086de614fc0a",
   "lessons": [
     {
       "id": "egatari-intro",
       "file": "egatari-intro.play.ega.html",
-      "sha256": "b5d6fcb38de27dae63fd3ff5cd034b769bea0754aacd1b33df5a54ff1876411f",
-      "size": 2856311,
+      "sha256": "0b416d7a0d602484156503955cddcd85e4b0073f08f5ddea1d22dfbc68d89e41",
+      "size": 2883290,
       "title": "Egatari の紹介",
       "lang": "ja"
     },
     {
       "id": "egatari-intro-en",
       "file": "egatari-intro-en.play.ega.html",
-      "sha256": "1aca7d78ea7f9e72114ae986a46903d08b0e85d6684486a2e6bd8fb95a092312",
-      "size": 1127162,
+      "sha256": "3c7c1a8fe17137db51227b058cd47103252df841843d88d27de4c6643c43c92d",
+      "size": 1154141,
       "title": "Introducing Egatari",
       "lang": "en"
     },
     {
       "id": "parts-showcase",
       "file": "parts-showcase.play.ega.html",
-      "sha256": "2f99cdcc42f158dd586ea3a1601d1b401654e813c8e8ac7908157fc4b957f60d",
-      "size": 4091389,
+      "sha256": "117a7978e1cd5e086a1b61fb77c58d2bf0116436b45a273d8f103a71b6371775",
+      "size": 4132771,
       "title": "パーツ図鑑",
+      "lang": "ja"
+    },
+    {
+      "id": "studio-howto",
+      "file": "studio-howto.play.ega.html",
+      "sha256": "5a16a74c0b2869327db7a868096a4d012cc69b42f352c29b1c56247657f7f18d",
+      "size": 3031768,
+      "title": "Studio で始める絵語り（ガイドブック）",
       "lang": "ja"
     },
     {
       "id": "moon-phases",
       "file": "moon-phases.play.ega.html",
-      "sha256": "1369f247920a0744447e11bfcd53adb507b5fa8435f7c18115d197fc12d7ecb2",
-      "size": 1246451,
+      "sha256": "27182e322bbc17beaf5e87d0a6c2928dc5e55b53694e9a587b2bcca16bc07f56",
+      "size": 1274584,
       "title": "月の満ち欠け",
       "lang": "ja"
     },
     {
       "id": "chords",
       "file": "chords.play.ega.html",
-      "sha256": "ede204e83b12ffc687a69720e83b69746ba421bfb081a265a310d1ba1b2dba3a",
-      "size": 1211412,
+      "sha256": "f273aca97caa8429cd72958690d8c41ebaa172f35383bc0984091d94a115a25c",
+      "size": 1238391,
       "title": "和音のしくみ",
+      "lang": "ja"
+    },
+    {
+      "id": "tsurezure-ninnaji",
+      "file": "tsurezure-ninnaji.play.ega.html",
+      "sha256": "b868ce2a9c18dc7a0b62ad059244bb207297a0f4b19f4cac82b48dbe646897f0",
+      "size": 3475280,
+      "title": "徒然草「仁和寺にある法師」",
       "lang": "ja"
     },
     {
       "id": "sentence-structure",
       "file": "sentence-structure.play.ega.html",
-      "sha256": "be0161f5e12a1290abfda4ab75c162b90b7122abe8ff42016e61dbcff5150bca",
-      "size": 1251199,
+      "sha256": "0dbee03a650e9f620757bc6d39aef3035244ae4c997091a71163c926ce1494eb",
+      "size": 1278178,
       "title": "英文の構造",
       "lang": "ja"
     },
     {
       "id": "for-loop",
       "file": "for-loop.play.ega.html",
-      "sha256": "f5eb022d6f1e06449274c72cab1fcf46980fc7c81ea3b1cb13b6fc4bc2ae48da",
-      "size": 1184960,
+      "sha256": "ed9592278729415368dbeb2825a6268124911746302626259920ba6c2b37bef6",
+      "size": 1211939,
       "title": "for 文で合計と平均を求める",
       "lang": "ja"
     },
     {
       "id": "huffman",
       "file": "huffman.play.ega.html",
-      "sha256": "c024c593c71e3564160e48db5da46a5b4f9475f583e292a34874020c198dcc7f",
-      "size": 1718647,
+      "sha256": "b719a9c7b0232cf5755de767ad539baba66eb618c6276420b1e18f97aaabb340",
+      "size": 1747779,
       "title": "ハフマン符号",
       "lang": "ja"
     },
     {
       "id": "bayes",
       "file": "bayes.play.ega.html",
-      "sha256": "cb873692740708187973b7007b0c65e9afeb688b2b8eee560b4388cd71a687c2",
-      "size": 1178246,
+      "sha256": "293e12ab9ff2252a5dbc0a4272f0baa051aae88f446fec9f1680d7b544a33518",
+      "size": 1206379,
       "title": "Bayes' theorem",
       "lang": "en"
     },
     {
       "id": "vectors",
       "file": "vectors.play.ega.html",
-      "sha256": "ce19a8b53de456d26c11389b3802754ad1ea9b5740385a843df1fe9fe0907c65",
-      "size": 1130856,
+      "sha256": "dab50e71db74764e45bcacf2dad3525a930538573150d55b9333f4be9661ee99",
+      "size": 1158316,
       "title": "内積・正射影と 1 次変換",
       "lang": "ja"
     },
     {
       "id": "classify-cv",
       "file": "classify-cv.play.ega.html",
-      "sha256": "d952615121dbad06a41f78730752a60b9ac4d1b117bdb3d0a196db669675f97e",
-      "size": 1275402,
+      "sha256": "1b7b5473d6821d831cfcbb263992874a4ecb0a856fcd23f6b1776e9bece72ff8",
+      "size": 1302613,
       "title": "分類の境界と交差検証",
+      "lang": "ja"
+    },
+    {
+      "id": "research-position",
+      "file": "research-position.play.ega.html",
+      "sha256": "4ba0ebd4ef82f085797b4b215d66e342f5d6a7ede05717bbf68047c9665d0d48",
+      "size": 3996590,
+      "title": "研究の位置づけ（架空の研究発表）",
       "lang": "ja"
     },
     {
       "id": "population",
       "file": "population.play.ega.html",
-      "sha256": "d468d8d7f6fd030f7d204336144c9c155e3fc1dec0773b56994610ed9134dc2d",
-      "size": 1900589,
+      "sha256": "c5ab6e9012493a2d9382e9495da1c8e0058dd8c3335ca976551cdf054c3c02fc",
+      "size": 1930943,
       "title": "日本の人口の移り変わり",
+      "lang": "ja"
+    },
+    {
+      "id": "climate-graph",
+      "file": "climate-graph.play.ega.html",
+      "sha256": "ef553e72a57aad7a304c82453fb5a1d9ddb44244deb5f380e1c965f80c58e60a",
+      "size": 2749990,
+      "title": "雨温図を読む",
       "lang": "ja"
     },
     {
       "id": "live-birthday",
       "file": "live-birthday.play.ega.html",
-      "sha256": "d40213d8d3c6d55b46e2d6e01f0c72b269d958cd8e53db9122435647bcb5ad73",
-      "size": 1271607,
+      "sha256": "c921020ddbef8825b4c0fc083a49a2c1b93fff82a4fa3ef224e89dc85a246280",
+      "size": 1300904,
       "title": "40 人のクラスに、同じ誕生日の 2 人はいる？",
       "lang": "ja"
     },
     {
       "id": "genai-guideline",
       "file": "genai-guideline.play.ega.html",
-      "sha256": "06d775ce3e83b51f45c95e5cab9f310e86519fa914234f7ab1aa943212e790bd",
-      "size": 1699930,
+      "sha256": "149e81e4d022185c3ed3e775fd3bb2f133565141b43511fe7fb76e47f5f25f22",
+      "size": 1726909,
       "title": "生成AIの利活用ガイドラインを読む",
       "lang": "ja"
     },
     {
       "id": "quarterly-report",
       "file": "quarterly-report.play.ega.html",
-      "sha256": "2c870b97f9206a3796ab1dfc4d971229894f69b51a0dd01f6481aea2c108d5a6",
-      "size": 1363589,
+      "sha256": "c48f9e43752263b9b7faac17ac84a51980a2db8137061a3e0c66398df559f8fc",
+      "size": 1391190,
       "title": "第 3 四半期 業績報告",
       "lang": "ja"
     },
     {
       "id": "security-training",
       "file": "security-training.play.ega.html",
-      "sha256": "3126e64a6e29a7cb3123c1417cfca99545aa1a94a93d0f5325e62247935bf26d",
-      "size": 1340904,
+      "sha256": "9c805f2247db36f6459ac74b1e1fe49e141a6c8307e654c3cd6a929a2ab5083c",
+      "size": 1369037,
       "title": "情報セキュリティ研修",
       "lang": "ja"
     },
     {
       "id": "city-budget-ja",
       "file": "city-budget-ja.play.ega.html",
-      "sha256": "bf51ce9bef1e5bdf43c4bb214324d9e4b7e605a1aa3e74c5cfeeaaeb02cd7507",
-      "size": 1251153,
+      "sha256": "30cbc8ec75bb5d86363e212e34dd202800bc628e26b5d18923e8928eb9eff505",
+      "size": 1278754,
       "title": "A 市の予算 2027 年度",
       "lang": "ja"
     },
     {
       "id": "city-budget-en",
       "file": "city-budget-en.play.ega.html",
-      "sha256": "da466316aaa05035fdcdaa70384438283a5ba7db4d6854772b9ff658268e6270",
-      "size": 1134778,
+      "sha256": "f15a1aa76a2e466baea58d33d92a2d01225cca2ba7b448158a5207b1feeaa758",
+      "size": 1162379,
       "title": "City A budget 2027",
       "lang": "en"
     },
     {
       "id": "hand-hygiene",
       "file": "hand-hygiene.play.ega.html",
-      "sha256": "5692fc023cd2a2691235c267605cfd2ccbb2febe02b61bcb5a29257f87fee8a8",
-      "size": 1309986,
+      "sha256": "3321e2286f6d46793b19b6bcdea554c0fd46e0c2b41eab03eeff8f2a83184310",
+      "size": 1338119,
       "title": "手指衛生の 5 つのタイミング",
       "lang": "ja"
     },
     {
       "id": "hazard-map",
       "file": "hazard-map.play.ega.html",
-      "sha256": "8a31d7022f05a0644c0f1a91508bf043e2c3b85b569f4ddc2f91566812c11cfb",
-      "size": 1338472,
+      "sha256": "ec661aca1e1cda9fe9fbb1c023fcac67fc5d34fd343d044ff180517d5553ea57",
+      "size": 1366605,
       "title": "大雨のとき、どこへ逃げる？",
       "lang": "ja"
     }

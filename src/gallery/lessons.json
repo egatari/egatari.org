@@ -1,6 +1,6 @@
 {
-  "release": "samples-v0.6.17",
-  "download_base": "https://github.com/egatari/examples/releases/download/samples-v0.6.17/",
+  "release": "samples-v0.6.19",
+  "download_base": "https://github.com/egatari/examples/releases/download/samples-v0.6.19/",
   "sections": [
     {
       "id": "intro",
@@ -69,6 +69,16 @@
       "playUrl": "/gallery/play/?id=parts-showcase"
     },
     {
+      "id": "studio-howto",
+      "title": "Studio で始める絵語り（ガイドブック）",
+      "section": "intro",
+      "lang": "ja",
+      "portable": "studio-howto.ega.html",
+      "play": "studio-howto.play.ega.html",
+      "cover": "covers/studio-howto.webp",
+      "playUrl": "/gallery/play/?id=studio-howto"
+    },
+    {
       "id": "moon-phases",
       "title": "月の満ち欠け",
       "section": "teaching",
@@ -91,6 +101,18 @@
       "playUrl": "/gallery/play/?id=chords",
       "group": "class",
       "subject": "音楽"
+    },
+    {
+      "id": "tsurezure-ninnaji",
+      "title": "『徒然草』仁和寺にある法師",
+      "section": "teaching",
+      "lang": "ja",
+      "portable": "tsurezure-ninnaji.ega.html",
+      "play": "tsurezure-ninnaji.play.ega.html",
+      "cover": "covers/tsurezure-ninnaji.webp",
+      "playUrl": "/gallery/play/?id=tsurezure-ninnaji",
+      "group": "class",
+      "subject": "国語"
     },
     {
       "id": "sentence-structure",
@@ -162,6 +184,17 @@
       "group": "lecture"
     },
     {
+      "id": "research-position",
+      "title": "売上の止まり方から、欠品を先に知る（研究の位置づけ）",
+      "section": "teaching",
+      "lang": "ja",
+      "portable": "research-position.ega.html",
+      "play": "research-position.play.ega.html",
+      "cover": "covers/research-position.webp",
+      "playUrl": "/gallery/play/?id=research-position",
+      "group": "lecture"
+    },
+    {
       "id": "population",
       "title": "日本の人口の移り変わり",
       "section": "teaching",
@@ -170,6 +203,18 @@
       "play": "population.play.ega.html",
       "cover": "covers/population.webp",
       "playUrl": "/gallery/play/?id=population",
+      "group": "class",
+      "subject": "社会"
+    },
+    {
+      "id": "climate-graph",
+      "title": "雨温図を読む",
+      "section": "teaching",
+      "lang": "ja",
+      "portable": "climate-graph.ega.html",
+      "play": "climate-graph.play.ega.html",
+      "cover": "covers/climate-graph.webp",
+      "playUrl": "/gallery/play/?id=climate-graph",
       "group": "class",
       "subject": "社会"
     },

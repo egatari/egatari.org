@@ -373,3 +373,4 @@ h1, h2, h3, .area-name { word-break: auto-phrase; text-wrap: balance; }
 .intro-video { margin: 2.25rem auto 0; max-width: 52rem; }
 .intro-video video { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: .5rem; border: 1px solid var(--line, rgba(0,0,0,.12)); background: #000; }
 .intro-video figcaption { margin-top: .5rem; font-size: .875rem; color: var(--muted); }
+.start-guide { margin: 1rem 0 0; font-size: .9375rem; color: var(--muted); }
