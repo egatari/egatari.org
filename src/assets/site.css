@@ -368,3 +368,8 @@ h1, h2, h3, .area-name { word-break: auto-phrase; text-wrap: balance; }
 .learners p { margin: 0 0 .75rem; }
 .learners .links { margin-top: .5rem; }
 .view video { display: block; width: 100%; height: 100%; object-fit: cover; object-position: 50% 0; }
+
+/* 紹介動画（トップ） */
+.intro-video { margin: 2.25rem auto 0; max-width: 52rem; }
+.intro-video video { display: block; width: 100%; max-width: 100%; height: auto; aspect-ratio: 16 / 9; border-radius: .5rem; border: 1px solid var(--line, rgba(0,0,0,.12)); background: #000; }
+.intro-video figcaption { margin-top: .5rem; font-size: .875rem; color: var(--muted); }

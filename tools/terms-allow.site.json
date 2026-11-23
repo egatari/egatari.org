@@ -1,6 +1,17 @@
 {
   "about": "Site-local allow list for studio's lint-terms --prose (paths relative to src/). Each entry says why the glossary's avoid word is right here.",
   "allow": [
-    { "file": "**/*.html", "pattern": "class=\"skip\"[^>]*>本文へ", "term": "read-in-book", "reason": "Skip link to the page's main content (web convention), not the book view." }
+    {
+      "file": "**/*.html",
+      "pattern": "class=\"skip\"[^>]*>本文へ",
+      "term": "read-in-book",
+      "reason": "Skip link to the page's main content (web convention), not the book view."
+    },
+    {
+      "file": "gallery/index.html",
+      "pattern": "生成AIの利活用ガイドライン",
+      "term": "generative-ai",
+      "reason": "Part of the title of a public guideline the sample reads (proper name, written as published)."
+    }
   ]
 }
